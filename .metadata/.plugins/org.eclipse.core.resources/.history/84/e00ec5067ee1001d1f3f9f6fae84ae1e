@@ -1,0 +1,36 @@
+package co.edu.uco.publiuco.crosscutting.utils;
+
+public final class UtilText {
+	
+	private final static UtilText INSTANCE = new UtilText();;
+	
+	private UtilText() {
+		super();
+	}
+	
+	public static final UtilText getUtilText() {
+		return INSTANCE;
+	}
+	
+	public final boolean isNull(final String text) {
+		return UtilObject.isNull(text);
+	}
+	
+	public final String getDefault(final String text, final String defaultValue) {
+		
+		String result = text;
+		
+		if(isNull(text)) {
+			result = isNull(defaultValue) ? "" : defaultValue;
+		}
+		return result;
+	}
+	
+	public final String getDefault(final String text) {
+		return getDefault(text, "");
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(getUtilText().getDefault(null,null));
+	}
+}
