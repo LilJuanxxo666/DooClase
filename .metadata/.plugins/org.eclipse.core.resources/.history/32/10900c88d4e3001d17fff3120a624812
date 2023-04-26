@@ -1,0 +1,7 @@
+package co.edu.uco.publiuco.business.domain.concrete;
+
+
+
+public final class EstadoTipoRelacionInstitucionAssmbler implements Assembler<EstadoTipoRelacionInstitucionDomain, EstadoTipoRelacionInstitucionDTO, EstadoTipoRelacionInstitucionEntity>{
+
+}

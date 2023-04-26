@@ -3,6 +3,7 @@ package co.edu.uco.publiuco.dto;
 import java.util.UUID;
 
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
+import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 public final class EstadoTipoRelacionInstitucionDTO {
 	
@@ -53,18 +54,5 @@ public final class EstadoTipoRelacionInstitucionDTO {
 	public String toString() {
 		return "EstadoTipoRelacionInstitucionDTO [identificador=" + identificador + ", nombre=" + nombre
 				+ ", descripcion=" + descripcion + "]";
-	}
-	
-	public static void main(String[] args) {
-		EstadoTipoRelacionInstitucionDTO objeto = new EstadoTipoRelacionInstitucionDTO();
-		objeto.setIdentificador(UtilUUID.generateNewUUID());
-		objeto.setNombre("Docente");
-		objeto.setDescripcion("Soy Docente");
-		System.out.println(objeto);
-		
-		EstadoTipoRelacionInstitucionDTO objetoDos = 
-				EstadoTipoRelacionInstitucionDTO.create().setDescripcion("Soy docente")
-				.setIdentificador(UtilUUID.generateNewUUID()).setNombre("Docente");
-		System.out.println(objetoDos);
 	}
 }
