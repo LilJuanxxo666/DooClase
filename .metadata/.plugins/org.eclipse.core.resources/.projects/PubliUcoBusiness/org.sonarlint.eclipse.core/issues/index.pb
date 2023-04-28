@@ -9,3 +9,7 @@ i
 _src/co/edu/uco/publiuco/business/assembler/concrete/EstadoTipoRelacionInstitucionAssembler.java,1\7\174f637d4e507ec950b691f5b26d146bbcb6c7ac
 €
 Psrc/co/edu/uco/publiuco/business/domain/EstadoTipoRelacionInstitucionDomain.java,d\b\dbe258b3e3d082a93855ab9df767446530c86046
+z
+Jsrc/co/edu/uco/publiuco/business/domain/TipoRelacionInstitucionDomain.java,2\0\20868018fb7a8f32b4ce16bad8f407d5abc04368
+‰
+Ysrc/co/edu/uco/publiuco/business/assembler/concrete/TipoRelacionInstitucionAssembler.java,5\9\5979c6ac9dd502ab9f1825b04455f3aaf6fedda7

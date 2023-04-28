@@ -49,3 +49,20 @@ Caused by: java.lang.Exception: Resource '/PubliUcoDTO/src/co/edu/uco/publiuco/d
 	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
 	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
 	... 8 common frames omitted
+2023-04-27 23:48:17 [Worker-49: jsparrow.marker] ERROR eu.jsparrow.ui.K - Cannot run MarkerJob
+org.eclipse.core.internal.resources.ResourceException: Resource '/PubliUcoDTO/src/co/edu/uco/publiuco/dto/EstadoEscritor.java' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.deleteMarkers(Resource.java:810)
+	at eu.jsparrow.ui.I.e(SourceFile:105)
+	at eu.jsparrow.ui.H.a(SourceFile:147)
+	at eu.jsparrow.ui.K.runInWorkspace(SourceFile:38)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: Resource '/PubliUcoDTO/src/co/edu/uco/publiuco/dto/EstadoEscritor.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 8 common frames omitted
+2023-04-28 05:37:16 [Framework stop - Equinox Container: 24c0a77c-14dc-42fd-938d-e86763ba43fc] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-04-28 13:34:48 [Worker-0: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-04-28 15:39:32 [Framework stop - Equinox Container: 2a7bf8ca-eb9d-463d-835d-45182796b3cf] INFO  eu.jsparrow.ui.a - Stopping jSparrow

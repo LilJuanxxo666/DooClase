@@ -1,0 +1,5 @@
+package co.edu.uco.publiuco.data.dao.factory.relational.sqlserver.postgresql;
+
+public class PostgreSqlDAOFactory {
+
+}

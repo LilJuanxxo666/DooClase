@@ -1,0 +1,21 @@
+package co.edu.uco.publiuco.data.dao.factory;
+
+import co.edu.uco.publiuco.data.dao.EstadoTipoRelacionInstitucionDAO;
+import co.edu.uco.publiuco.data.dao.TipoRelacionInstitucionDAO;
+
+public abstract class DAOFactory{
+	
+	public abstract void abrirConexion(); 
+	
+	public abstract void cerrarConexion();
+	
+	public abstract void iniciarTransaccion();
+
+	public abstract void confirmarTransaccion();
+	
+	public abstract void cancelarTransaccion();
+
+	public abstract EstadoTipoRelacionInstitucionDAO getEstadoRelacionInstitucionDAO();
+	
+	public abstract TipoRelacionInstitucionDAO getTipoRelacionInstitucionDAO();
+}

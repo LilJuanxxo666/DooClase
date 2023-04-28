@@ -1,0 +1,4 @@
+1682721573418	Delete element
+1682723955664	Rename type 'SqlServerDAOFactiry'
+1682724807323	Rename package 'co.edu.uco.publiuco.data.dao.sqlserver'
+1682724855596	Rename package 'co.edu.uco.publiuco.data.dao.factory.relational.sqlserver.postgresql'

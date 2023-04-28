@@ -1,0 +1,40 @@
+package co.edu.uco.publiuco.crosscutting.utils;
+
+public class UtilNumber{
+	
+	private static final UtilNumber INSTANCE = new UtilNumber();
+	public static final Object ZERO = 0;
+	
+	private UtilNumber(){
+		super();
+	}
+	public static final UtilNumber getUtilNumber() {
+		return INSTANCE;
+	}
+	
+	public final <T extends Number> boolean isNull(final T numero) {
+		return UtilObject.isNull(numero);
+	}
+	
+	public final <T extends Number> T getDefault(final T number, final T defaultValue) {	
+		T result = number;
+		
+		if(isNull(number)) {
+			result = isNull(defaultValue) ? (T) ZERO : defaultValue;
+		}
+		return result;
+	}
+	public final <T extends Number> T getDefault(final T number) {
+		return getDefault(number, (T) ZERO);
+	}
+	
+	
+	public final <T extends Number> T getDefaultValue() {
+		return (T) ZERO;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(UtilNumber.getUtilNumber().getDefault(null));
+	}
+	
+}
