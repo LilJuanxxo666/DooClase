@@ -1,0 +1,32 @@
+package co.edu.uco.publiuco.crosscutting.utils;
+
+public final class UtilNumber{
+	
+	private static final UtilNumber INSTANCE = new UtilNumber();
+	public static final Object EMPTY = 0; 
+	
+	private UtilNumber(){
+		super();
+	}
+	public static final UtilNumber getUtilNumber() {
+		return INSTANCE;
+	}
+	
+	public final boolean isNull(final Object numero) {
+		return UtilObject.isNull(numero);
+	}
+	public final Object getDefault(final Object numero, final Object defaultValue) {
+			
+			Object result = numero;
+			if(isNull(numero)) {
+				result = isNull(defaultValue) ? EMPTY : defaultValue;
+			}
+			return result;
+	}
+	public final Object getDefaultValue() {
+		return EMPTY;
+	}
+	public final Object getDefault(final Object numero) {
+		return getDefault(numero, EMPTY);
+	}
+}

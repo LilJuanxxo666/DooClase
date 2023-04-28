@@ -1,0 +1,35 @@
+package co.edu.uco.publiuco.crosscutting.utils;
+
+public final class UtilInteger{
+	
+	private static final UtilInteger INSTANCE = new UtilInteger();
+	public static final int EMPTY = 0; 
+	
+	private UtilInteger(){
+		super();
+	}
+	public static final UtilInteger getUtilNumber() {
+		return INSTANCE;
+	}
+	
+	public final boolean isNull(final Integer numero) {
+		return UtilObject.isNull(numero);
+	}
+	public final Integer getDefault(final Integer numero, final Integer defaultValue) {
+			Integer result = numero;
+			if(isNull(numero)) {
+				result = isNull(defaultValue) ? EMPTY : defaultValue;
+			}
+			return result;
+	}
+	public final Integer getDefaultValue() {
+		return EMPTY;
+	}
+	public final Integer getDefaultInteger(final Integer numero) {
+		return getDefault(numero, EMPTY);
+	}
+	public static void main(String[] args) {
+		int hola = UtilInteger.getUtilNumber().getDefaultInteger(null);
+		System.out.println(hola);
+	}
+}

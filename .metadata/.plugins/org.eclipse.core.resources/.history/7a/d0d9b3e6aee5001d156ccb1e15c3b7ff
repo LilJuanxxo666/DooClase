@@ -1,0 +1,58 @@
+package co.edu.uco.publiuco.dto;
+
+import java.util.UUID;
+
+import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
+import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
+
+public final class SuscripcionCategoria {
+	
+	private UUID identificador;
+	private PerfilDTO perfil;
+	private PlanCategoriaDTO planCategoria;
+	private EstadoSuscripcionDTO estado;
+	
+	public SuscripcionCategoria() {
+		super();
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setPerfil(PerfilDTO.create());
+		setPlanCategoria(PlanCategoriaDTO.create());
+		setEstado(EstadoSuscripcionDTO.create());
+	}
+	
+	public SuscripcionCategoria(UUID identificador, PerfilDTO perfil, PlanCategoriaDTO planCategoria,
+			EstadoSuscripcionDTO estado) {
+		super();
+		setIdentificador(identificador);
+		setPerfil(perfil);
+		setPlanCategoria(planCategoria);
+		setEstado(estado);
+	}
+	public static final SuscripcionCategoriaDTO create() {
+		return new SuscripcionCategoriaDTO();
+	}
+	public final UUID getIdentificador() {
+		return identificador;
+	}
+	public final void setIdentificador(UUID identificador) {
+		this.identificador = UtilUUID.getDefault(identificador);
+	}
+	public final PerfilDTO getPerfil() {
+		return perfil;
+	}
+	public final void setPerfil(PerfilDTO perfil) {
+		this.perfil = UtilObject.getDefault(perfil, PerfilDTO.create());
+	}
+	public final PlanCategoriaDTO getPlanCategoria() {
+		return planCategoria;
+	}
+	public final void setPlanCategoria(PlanCategoriaDTO planCategoria) {
+		this.planCategoria = UtilObject.getDefault(planCategoria, PlanCategoriaDTO.create());
+	}
+	public final EstadoSuscripcionDTO getEstado() {
+		return estado;
+	}
+	public final void setEstado(EstadoSuscripcionDTO estado) {
+		this.estado = UtilObject.getDefault(estado, EstadoSuscripcionDTO.create());
+	}
+}

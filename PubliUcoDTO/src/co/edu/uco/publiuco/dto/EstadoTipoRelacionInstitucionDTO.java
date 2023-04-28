@@ -18,10 +18,9 @@ public final class EstadoTipoRelacionInstitucionDTO {
 		setDescripcion(UtilText.EMPTY);
 	}
 	
-	public static EstadoTipoRelacionInstitucionDTO create() {
+	public static final EstadoTipoRelacionInstitucionDTO create() {
 		return new EstadoTipoRelacionInstitucionDTO();
 	}
-	
 	public EstadoTipoRelacionInstitucionDTO(final UUID identificador, final String nombre, final String descripcion) {
 		super();
 		setIdentificador(identificador);
@@ -48,11 +47,5 @@ public final class EstadoTipoRelacionInstitucionDTO {
 	public final EstadoTipoRelacionInstitucionDTO setDescripcion(final String descripcion) {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		return this;
-	}
-
-	@Override
-	public String toString() {
-		return "EstadoTipoRelacionInstitucionDTO [identificador=" + identificador + ", nombre=" + nombre
-				+ ", descripcion=" + descripcion + "]";
 	}
 }

@@ -2,8 +2,9 @@ package co.edu.uco.publiuco.crosscutting.utils;
 
 public final class UtilText {
 	
-	private final static UtilText INSTANCE = new UtilText();
+	private static final UtilText INSTANCE = new UtilText();
 	public static final String EMPTY = "";
+	private static final String EMAIL_RE = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 	
 	private UtilText() {
 		super();
@@ -41,5 +42,13 @@ public final class UtilText {
 	
 	public final boolean matchPattern(final String text, final String pattern) {
 		return getDefault(text).matches(getDefault(pattern));
+	}
+	
+	public static final boolean emailStringIsValid(final String emailValue) {
+		return UtilText.getUtilText().matchPattern(emailValue, EMAIL_RE);
+	}
+	
+	public static final String getDefaultStringEmail(final String emailValue) {
+		return emailStringIsValid(emailValue) ? emailValue : EMPTY;
 	}
 }

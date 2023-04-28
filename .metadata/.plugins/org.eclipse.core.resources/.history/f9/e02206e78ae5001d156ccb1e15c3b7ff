@@ -1,0 +1,60 @@
+package co.edu.uco.publiuco.dto;
+
+import java.util.UUID;
+
+public final class CategoriaDTO{
+	
+	private CategoriaDTO categoriaPadre;
+	private UUID identificador;
+	private String nombre;
+	private String descripcion;
+	private EstadoCategoriaDTO estadoCategoria;
+	private EstadoPreferenciaDTO estadoPreferencia;
+		
+	public CategoriaDTO() {
+		super();
+	}
+	
+	public CategoriaDTO(final CategoriaDTO categoriaPadre, final String nombre, final String descripcion,
+			final EstadoCategoriaDTO estadoCategoria, final EstadoPreferenciaDTO estadoPreferencia) {
+		super();
+		setCategoriaPadre(categoriaPadre);
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.estadoCategoria = estadoCategoria;
+		this.estadoPreferencia = estadoPreferencia;
+	}
+
+	public final CategoriaDTO getCategoriaPadre() {
+		return categoriaPadre;
+	}
+	public final void setCategoriaPadre(CategoriaDTO categoriaPadre) {
+		this.categoriaPadre = categoriaPadre;
+	}
+	public final String getNombre() {
+		return nombre;
+	}
+	public final void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public final String getDescripcion() {
+		return descripcion;
+	}
+	public final void setDescripcion(String descripsion) {
+		this.descripcion = descripsion;
+	}
+	public final EstadoCategoriaDTO getEstadoCategoria() {
+		return estadoCategoria;
+	}
+	public final void setEstadoCategoria(EstadoCategoriaDTO estadoCategoria) {
+		this.estadoCategoria = estadoCategoria;
+	}
+	public final EstadoPreferenciaDTO getEstadoPreferencia() {
+		return estadoPreferencia;
+	}
+	public final void setEstadoPreferencia(EstadoPreferenciaDTO estadoPreferencia) {
+		this.estadoPreferencia = estadoPreferencia;
+	}
+	
+	
+}

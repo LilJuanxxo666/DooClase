@@ -5,3 +5,27 @@
 1682472477020	Copy compilation unit
 1682472537379	Delete element
 1682474719312	Rename type 'EstadoRelacionInstitucionDTO'
+1682616245513	Copy compilation unit
+1682656065613	Rename type 'EstadoPublicacion'
+1682656135850	Rename type 'EstadoAdministrador'
+1682656230476	Rename type 'EstadoAdministradorCategoria'
+1682656578127	Rename type 'EstadoVersion'
+1682656649368	Rename type 'EstadoTipoEscritor'
+1682656658500	Rename type 'EstadoTipoAcceso'
+1682656702920	Rename type 'EstadoSuscripcion'
+1682656746253	Rename type 'EstadoPublicacion'
+1682657209970	Rename type 'EstadoPreferencia'
+1682657297867	Rename type 'EstadoEscritor'
+1682657325958	Rename type 'EstadoCategoria'
+1682657699767	Rename type 'EstadoAdministradorCategoria'
+1682658124456	Rename compilation unit 'EstadoRevisor.java'
+1682658181042	Delete element
+1682658385362	Rename type 'EstadoTipoIdentificacion'
+1682658635886	Rename type 'EstadoComentarioLector'
+1682659169311	Rename type 'TipoComentarioRevisor'
+1682659954264	Rename type 'TipoEscritor'
+1682672196265	Rename type 'Revisor'
+1682674867388	Rename type 'CategoriaAdministradorCategoria'
+1682675692663	Rename type 'PublicidadDTO'
+1682677487712	Rename type 'SuscripcionCategoria'
+1682677751316	Rename compilation unit 'PreferenciaEscritor.java'

@@ -1,0 +1,66 @@
+package co.edu.uco.publiuco.dto;
+
+import java.util.UUID;
+
+import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
+
+public final class PerfilDTO {
+	private UUID identificador;
+	private LectorDTO lector;
+	private RespuestaDTO recomendacionCategoria;
+	private RespuestaDTO recomendacionAutor;
+	private EstadoLectorDTO estado;
+	
+	public PerfilDTO(UUID identificador, LectorDTO lector, RespuestaDTO recomendacionCategoria,
+			RespuestaDTO recomendacionAutor, EstadoLectorDTO estado) {
+		super();
+		setIdentificador(identificador);
+		setLector(lector);
+		setRecomendacionAutor(recomendacionAutor);
+		setRecomendacionCategoria(recomendacionCategoria);
+		setEstado(estado);
+	}
+	
+	public PerfilDTO() {
+		super();
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setLector(LectorDTO.create());
+		setRecomendacionAutor(RespuestaDTO.create());
+		setRecomendacionCategoria(RespuestaDTO.create());
+		setEstado();
+	}
+	
+	public final UUID getIdentificador() {
+		return identificador;
+	}
+	public final void setIdentificador(UUID identificador) {
+		this.identificador = identificador;
+	}
+	public final LectorDTO getLector() {
+		return lector;
+	}
+	public final void setLector(LectorDTO lector) {
+		this.lector = lector;
+	}
+	public final RespuestaDTO getRecomendacionCategoria() {
+		return recomendacionCategoria;
+	}
+	public final void setRecomendacionCategoria(RespuestaDTO recomendacionCategoria) {
+		this.recomendacionCategoria = recomendacionCategoria;
+	}
+	public final RespuestaDTO getRecomendacionAutor() {
+		return recomendacionAutor;
+	}
+	public final void setRecomendacionAutor(RespuestaDTO recomendacionAutor) {
+		this.recomendacionAutor = recomendacionAutor;
+	}
+	public final EstadoLectorDTO getEstado() {
+		return estado;
+	}
+	public final void setEstado(EstadoLectorDTO estado) {
+		this.estado = estado;
+	}
+	
+	
+}
+

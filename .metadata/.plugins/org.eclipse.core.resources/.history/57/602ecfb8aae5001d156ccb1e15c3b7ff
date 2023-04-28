@@ -1,0 +1,12 @@
+package co.edu.uco.publiuco.dto;
+
+import java.time.LocalDate;
+import java.util.UUID;
+
+public final class PublicidadDTO {
+	private UUID identificador;
+	private TipoAccesoDTO tipoAcceso;
+	private LocalDate fechaPublicacion;
+	
+	
+}

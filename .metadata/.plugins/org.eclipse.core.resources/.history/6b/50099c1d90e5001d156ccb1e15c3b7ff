@@ -1,0 +1,16 @@
+package co.edu.uco.publiuco.crosscutting.utils;
+
+public final class UtilNumber{
+	
+	private UtilNumber(){
+	}
+	public final boolean isNull(final Object numero) {
+		return UtilObject.isNull(numero);
+	}
+	
+	public static void main(String[] args) {
+		UtilNumber numero = new UtilNumber();
+		byte uno = 1;
+		System.out.println(numero.isNull(uno));
+	}
+}

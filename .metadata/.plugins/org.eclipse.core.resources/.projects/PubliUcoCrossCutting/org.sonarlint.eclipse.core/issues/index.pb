@@ -7,3 +7,5 @@ j
 :src/co/edu/uco/publiuco/crosscutting/utils/UtilObject.java,7\e\7e6c0023c8f13d32fa9c42d4c811258983f0f369
 h
 8src/co/edu/uco/publiuco/crosscutting/utils/UtilText.java,1\6\165917753e12908198950430169d560466096635
+h
+8src/co/edu/uco/publiuco/crosscutting/utils/UtilUUID.java,8\8\88bf5eaf4fe7e5f7e60a6397d09d9e1a3b1809ce

@@ -1,0 +1,4 @@
+package co.edu.uco.publiuco.business.assembler.concrete;
+
+public final class EstadoTipoRelacionInstitucionAssembler implements Assembler<EstadoTipoRelacionInstitucionDomain, T, E>{
+}
