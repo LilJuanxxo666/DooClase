@@ -18,8 +18,8 @@ public final class EstadoTipoAccesoDTO {
 		setDescripcion(UtilText.EMPTY);
 	}
 	
-	public static final EstadoTipoRelacionInstitucionDTO create() {
-		return new EstadoTipoRelacionInstitucionDTO();
+	public static final EstadoTipoAccesoDTO create() {
+		return new EstadoTipoAccesoDTO();
 	}
 	public EstadoTipoAccesoDTO (final UUID identificador, final String nombre, final String descripcion) {
 		super();

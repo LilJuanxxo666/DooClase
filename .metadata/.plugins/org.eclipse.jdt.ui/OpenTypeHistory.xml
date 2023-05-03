@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{EstadoSuscripcionDTO.java[EstadoSuscripcionDTO" modifiers="17" timestamp="1682657654609"/>
-    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{PlanCategoriaDTO.java[PlanCategoriaDTO" modifiers="17" timestamp="1682675316334"/>
-    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{RevisorDTO.java[RevisorDTO" modifiers="17" timestamp="1682672445590"/>
     <typeInfo handle="=PubliUcoCrossCutting/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.crosscutting.utils{UtilUUID.java[UtilUUID" modifiers="17" timestamp="1682474368008"/>
-    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{LectorDTO.java[LectorDTO" modifiers="17" timestamp="1682676805616"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{RevisorRevisionDTO.java[RevisorRevisionDTO" modifiers="17" timestamp="1682833622268"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{TipoAccesoDTO.java[TipoAccesoDTO" modifiers="17" timestamp="1682981251207"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{TipoEscritorDTO.java[TipoEscritorDTO" modifiers="17" timestamp="1682989759364"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{TipoIdentificacionDTO.java[TipoIdentificacionDTO" modifiers="17" timestamp="1682838359185"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{CategoriaDTO.java[CategoriaDTO" modifiers="17" timestamp="1682671764954"/>
+    <typeInfo handle="=PubliUcoEntities/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.entities{CategoriaEntity.java[CategoriaEntity" modifiers="17" timestamp="1682992489476"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{AdministradorCategoriaDTO.java[AdministradorCategoriaDTO" modifiers="17" timestamp="1682896060897"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{EscritorDTO.java[EscritorDTO" modifiers="17" timestamp="1682896060886"/>
+    <typeInfo handle="=PubliUcoEntities/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.entities{EscritorEntity.java[EscritorEntity" modifiers="1" timestamp="1682990402875"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{LectorDTO.java[LectorDTO" modifiers="17" timestamp="1682896060861"/>
+    <typeInfo handle="=PubliUcoEntities/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.entities{RevisorEntity.java[RevisorEntity" modifiers="1" timestamp="1682990402905"/>
+    <typeInfo handle="=PubliUcoEntities/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.entities{LectorEntity.java[LectorEntity" modifiers="1" timestamp="1682990402885"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{RevisorDTO.java[RevisorDTO" modifiers="17" timestamp="1682896189075"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{PerfilDTO.java[PerfilDTO" modifiers="17" timestamp="1682677026312"/>
+    <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{PlanCategoriaDTO.java[PlanCategoriaDTO" modifiers="17" timestamp="1682896919830"/>
 </typeInfoHistroy>

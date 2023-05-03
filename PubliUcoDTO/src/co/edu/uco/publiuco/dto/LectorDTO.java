@@ -2,7 +2,7 @@ package co.edu.uco.publiuco.dto;
 
 import java.util.UUID;
 
-import co.edu.uco.publiuco.crosscutting.utils.UtilInteger;
+import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
@@ -22,31 +22,28 @@ public final class LectorDTO{
 	private RespuestaDTO correoConfirmado;
 	private RespuestaDTO telefonoConfirmado;
 	private EstadoLectorDTO estado;
-	private EstadoLectorDTO estadoCalculo;
 	
 	public LectorDTO(){
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setTipoIdentifiacion(TipoIdentificacionDTO.create());
-		setNumeroIdentificacion(UtilInteger.EMPTY);
+		setNumeroIdentificacion(UtilNumber.ZERO.intValue());
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoApellido(UtilText.EMPTY);
 		setCorreo(UtilText.EMPTY);
 		setIndicadorPaisTelefono(UtilText.EMPTY);
-		setTelefono(UtilInteger.EMPTY);
+		setTelefono(UtilNumber.ZERO.intValue());
 		setRelacionInstitucion(TipoRelacionInstitucionDTO.create());
 		setCorreoConfirmado(RespuestaDTO.create());
 		setTelefonoConfirmado(RespuestaDTO.create());
 		setEstado(EstadoLectorDTO.create());
-		setEstadoCalculo(EstadoLectorDTO.create());
 	}
 	public LectorDTO(UUID identificador, TipoIdentificacionDTO tipoIdentifiacion,
 			int numeroIdentificacion, String primerNombre, String segundoNombre, String primerApellido,
 			String segundoApellido, String correo, String indicadorPaisTelefono, int telefono,
 			TipoRelacionInstitucionDTO relacionInstitucion, RespuestaDTO correoConfirmado,
-			RespuestaDTO telefonoConfirmado, EstadoLectorDTO estado,
-			EstadoLectorDTO estadoCalculo) {
+			RespuestaDTO telefonoConfirmado, EstadoLectorDTO estado) {
 		super();
 		setIdentificador(identificador);
 		setTipoIdentifiacion(tipoIdentifiacion);
@@ -62,7 +59,6 @@ public final class LectorDTO{
 		setCorreoConfirmado(correoConfirmado);
 		setTelefonoConfirmado(telefonoConfirmado);
 		setEstado(estado);
-		setEstadoCalculo(estadoCalculo);
 	}
 	
 	public static final LectorDTO create(){
@@ -96,7 +92,7 @@ public final class LectorDTO{
 
 
 	public final LectorDTO setNumeroIdentificacion(int numeroIdentificacion) {
-		this.numeroIdentificacion = UtilInteger.getUtilInteger().getDefaultInteger(numeroIdentificacion);
+		this.numeroIdentificacion = UtilNumber.getUtilNumber().getDefault(numeroIdentificacion).intValue();
 		return this;
 	}
 
@@ -171,7 +167,7 @@ public final class LectorDTO{
 	}
 
 	public final LectorDTO setTelefono(int telefono) {
-		this.telefono = UtilInteger.getUtilInteger().getDefaultInteger(telefono);
+		this.telefono = UtilNumber.getUtilNumber().getDefault(telefono).intValue();
 		return this;
 	}
 
@@ -208,15 +204,6 @@ public final class LectorDTO{
 
 	public final LectorDTO setEstado(EstadoLectorDTO estado) {
 		this.estado = UtilObject.getDefault(estado, EstadoLectorDTO.create());
-		return this;
-	}
-
-	public final EstadoLectorDTO getEstadoCalculo() {
-		return estadoCalculo;
-	}
-
-	public final LectorDTO setEstadoCalculo(EstadoLectorDTO estadoCalculo) {
-		this.estadoCalculo = UtilObject.getDefault(estadoCalculo, EstadoLectorDTO.create());
 		return this;
 	}
 }

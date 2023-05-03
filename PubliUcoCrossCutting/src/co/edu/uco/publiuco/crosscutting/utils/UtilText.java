@@ -36,6 +36,14 @@ public final class UtilText {
 		return getDefault(text, EMPTY);
 	}
 	
+	public final boolean isEmpty(final String text) {
+		return applyTrim(text).equals(EMPTY);
+	}
+	
+	public final String getDefaultIfEmpty(final String text, final String defaultVelue) {
+		return isEmpty(text) ? getDefault(defaultVelue) : text;
+	}
+	
 	public final String applyTrim(final String text) {
 		return getDefault(text).trim();
 	}

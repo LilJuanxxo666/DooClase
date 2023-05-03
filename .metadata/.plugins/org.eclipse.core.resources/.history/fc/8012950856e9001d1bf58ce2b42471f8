@@ -1,0 +1,35 @@
+package co.edu.uco.publiuco.crosscutting.exception;
+
+import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
+import co.edu.uco.publiuco.crosscutting.utils.UtilText;
+
+public class PubliUcoException extends RuntimeException{
+	
+	private ExceptionType type;
+	private String userMessage;
+	
+	protected PubliUcoException(String technicalMessage, String userMessage, Throwable rootCause, ExceptionType type) {
+		
+	}
+	private final void setTechnicalMessage(final String TechnicalMessage) {
+		if(UtilText.getUtilText().getDefault(TechnicalMessage));
+	}
+
+	public final ExceptionType getType() {
+		return type;
+	}
+
+	private final void setType(final ExceptionType type) {
+		this.type = UtilObject.getDefault(type, ExceptionType.GENERAL);
+	}
+
+	public final String getUserMessage() {
+		return userMessage;
+	}
+
+	public final void setUserMessage(String userMessage) {
+		this.userMessage = userMessage;
+	}
+	
+	
+}

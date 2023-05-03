@@ -1,6 +1,9 @@
 
-g
-java:S1172-"5Remove this unused method parameter "primerApellido".(ÏíØT8Ñ’¶¸ü0H¦RMAJORZ
+y	java:S107)"BConstructor has 14 parameters, which is greater than 7 authorized.(þÑÓ©úÿÿÿÿ8Ñ’¶¸ü0HÞ9RMAJORZ
 CODE_SMELL
-y	java:S107,"BConstructor has 15 parameters, which is greater than 7 authorized.(þÑÓ©úÿÿÿÿ8Ñ’¶¸ü0H¥RMAJORZ
+g
+java:S1172*"5Remove this unused method parameter "primerApellido".(ÏíØT8Ñ’¶¸ü0HÚ9RMAJORZ
+CODE_SMELL
+P
+java:S1116„"Remove this empty statement.(íþŸñ8è›è€ý0HÜ9RMINORZ
 CODE_SMELL

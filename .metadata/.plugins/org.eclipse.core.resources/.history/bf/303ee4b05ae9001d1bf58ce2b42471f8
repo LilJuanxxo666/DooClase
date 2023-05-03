@@ -1,0 +1,16 @@
+package co.edu.uco.publiuco.crosscutting.utils;
+
+import java.sql.Connection;
+
+public final class UtilSql {
+	
+	private UtilSql() {
+		super();
+	}
+	
+	public static boolean connectionIsOpen(final Connection connection) {
+		if(UtilObject.isNull(connection)) {
+			throw new PubliUcoCr
+		}
+	}
+}

@@ -66,3 +66,15 @@ Caused by: java.lang.Exception: Resource '/PubliUcoDTO/src/co/edu/uco/publiuco/d
 2023-04-28 05:37:16 [Framework stop - Equinox Container: 24c0a77c-14dc-42fd-938d-e86763ba43fc] INFO  eu.jsparrow.ui.a - Stopping jSparrow
 2023-04-28 13:34:48 [Worker-0: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
 2023-04-28 15:39:32 [Framework stop - Equinox Container: 2a7bf8ca-eb9d-463d-835d-45182796b3cf] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-04-28 16:38:50 [Worker-6: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-04-28 19:12:02 [Framework stop - Equinox Container: 423688d1-53e8-41d0-8967-70bcbe44c425] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-04-29 10:54:49 [Worker-7: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-04-29 10:55:39 [Framework stop - Equinox Container: 9326e584-5ed9-4371-bc43-c1028087a157] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-04-29 18:02:56 [Worker-5: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-04-30 03:00:12 [Framework stop - Equinox Container: 911cd828-d75a-4a9b-af00-6700895548db] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-04-30 03:01:46 [Worker-5: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-04-30 03:08:17 [Framework stop - Equinox Container: bcb5fa20-07bc-4aa3-b3a1-76d778c7d097] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-04-30 17:55:31 [Worker-6: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-05-02 03:21:35 [Framework stop - Equinox Container: 8335b395-3716-4fc4-9519-d7d4e95f0c57] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-05-02 07:00:32 [Worker-1: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-05-02 07:05:37 [Framework stop - Equinox Container: 4792b7c3-b089-48f7-90f2-c1dc1edcc37c] INFO  eu.jsparrow.ui.a - Stopping jSparrow

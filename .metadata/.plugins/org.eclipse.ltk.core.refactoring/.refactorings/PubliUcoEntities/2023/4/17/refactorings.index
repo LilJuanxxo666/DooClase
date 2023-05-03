@@ -6,3 +6,10 @@
 1682612783826	Copy compilation unit
 1682616263689	Rename type 'TipoRelacionInstitucionDTO'
 1682618096763	Copy compilation unit
+1682837459915	Rename compilation unit 'EstadoEscritor.java'
+1682838790847	Rename field 'estado'
+1682839226749	Rename field 'indicadorPais'
+1682839288544	Rename field 'confirmacionCorreo'
+1682839310190	Rename field 'confirmacionTelefono'
+1682839586111	Rename field 'numeroTelefono'
+1682839626073	Rename field 'tipoRelacion'

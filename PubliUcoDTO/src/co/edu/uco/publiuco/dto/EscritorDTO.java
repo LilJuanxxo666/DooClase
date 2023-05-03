@@ -1,8 +1,7 @@
 package co.edu.uco.publiuco.dto;
 
 import java.util.UUID;
-
-import co.edu.uco.publiuco.crosscutting.utils.UtilInteger;
+import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
@@ -22,31 +21,28 @@ public final class EscritorDTO {
 	private RespuestaDTO correoConfirmado;
 	private RespuestaDTO telefonoConfirmado;
 	private EstadoEscritorDTO estado;
-	private EstadoEscritorDTO estadoCalculo;
 	
 	public EscritorDTO(){
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setTipoIdentifiacion(TipoIdentificacionDTO.create());
-		setNumeroIdentificacion(UtilInteger.EMPTY);
+		setNumeroIdentificacion(UtilNumber.ZERO.intValue());
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoApellido(UtilText.EMPTY);
 		setCorreo(UtilText.EMPTY);
 		setIndicadorPaisTelefono(UtilText.EMPTY);
-		setTelefono(UtilInteger.EMPTY);
+		setTelefono(UtilNumber.ZERO.intValue());
 		setRelacionInstitucion(TipoRelacionInstitucionDTO.create());
 		setCorreoConfirmado(RespuestaDTO.create());
 		setTelefonoConfirmado(RespuestaDTO.create());
 		setEstado(EstadoEscritorDTO.create());
-		setEstadoCalculo(EstadoEscritorDTO.create());
 	}
 	public EscritorDTO(UUID identificador, TipoIdentificacionDTO tipoIdentifiacion,
 			int numeroIdentificacion, String primerNombre, String segundoNombre, String primerApellido,
 			String segundoApellido, String correo, String indicadorPaisTelefono, int telefono,
 			TipoRelacionInstitucionDTO relacionInstitucion, RespuestaDTO correoConfirmado,
-			RespuestaDTO telefonoConfirmado, EstadoEscritorDTO estado,
-			EstadoEscritorDTO estadoCalculo) {
+			RespuestaDTO telefonoConfirmado, EstadoEscritorDTO estado) {
 		super();
 		setIdentificador(identificador);
 		setTipoIdentifiacion(tipoIdentifiacion);
@@ -62,7 +58,6 @@ public final class EscritorDTO {
 		setCorreoConfirmado(correoConfirmado);
 		setTelefonoConfirmado(telefonoConfirmado);
 		setEstado(estado);
-		setEstadoCalculo(estadoCalculo);
 	}
 	public static final EscritorDTO create(){
 		return new EscritorDTO();
@@ -85,7 +80,7 @@ public final class EscritorDTO {
 		return numeroIdentificacion;
 	}
 	public final EscritorDTO setNumeroIdentificacion(int numeroIdentificacion) {
-		this.numeroIdentificacion = UtilInteger.getUtilInteger().getDefaultInteger(numeroIdentificacion);
+		this.numeroIdentificacion = UtilNumber.getUtilNumber().getDefault(numeroIdentificacion).intValue();
 		return this;
 	}
 	public final String getPrimerNombre() {
@@ -134,7 +129,7 @@ public final class EscritorDTO {
 		return telefono;
 	}
 	public final EscritorDTO setTelefono(int telefono) {
-		this.telefono = UtilInteger.getUtilInteger().getDefaultInteger(telefono);
+		this.telefono = UtilNumber.getUtilNumber().getDefault(telefono).intValue();;
 		return this;
 	}
 	public final TipoRelacionInstitucionDTO getRelacionInstitucion() {
@@ -163,13 +158,6 @@ public final class EscritorDTO {
 	}
 	public final EscritorDTO setEstado(EstadoEscritorDTO estado) {
 		this.estado = UtilObject.getDefault(estado, EstadoEscritorDTO.create());
-		return this;
-	}
-	public final EstadoEscritorDTO getEstadoCalculo() {
-		return estadoCalculo;
-	}
-	public final EscritorDTO setEstadoCalculo(EstadoEscritorDTO estadoCalculo) {
-		this.estadoCalculo = UtilObject.getDefault(estadoCalculo, EstadoEscritorDTO.create());
 		return this;
 	}
 }

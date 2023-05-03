@@ -7,11 +7,19 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 public final class TipoRelacionInstitucionDomain {
+	
+	private static final TipoRelacionInstitucionDomain DEFAULT_OBJECT = new TipoRelacionInstitucionDomain();
 	private UUID identificador; 
 	private String nombre;
 	private String descripcion;
 	private EstadoTipoRelacionInstitucionDomain estado;
 	
+	private TipoRelacionInstitucionDomain() {
+		setIdentificador(identificador);
+		setNombre(nombre);
+		setDescripcion(descripcion);
+		setEstado(estado);
+	}
 	public TipoRelacionInstitucionDomain(final UUID identificador, final String nombre, final String descripcion,
 			final EstadoTipoRelacionInstitucionDomain estado) {
 		super();
@@ -19,6 +27,9 @@ public final class TipoRelacionInstitucionDomain {
 		setNombre(nombre);
 		setDescripcion(descripcion);
 		setEstado(estado);
+	}
+	public static TipoRelacionInstitucionDomain getDefaultObject() {
+		return DEFAULT_OBJECT;
 	}
 	public final UUID getIdentificador() {
 		return identificador;

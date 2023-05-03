@@ -1,10 +1,10 @@
 package co.edu.uco.publiuco.dto;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
+import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilDate;
-import co.edu.uco.publiuco.crosscutting.utils.UtilInteger;
+import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
@@ -12,25 +12,22 @@ public final class PlanCategoriaDTO {
 	
 	private UUID identificador;
 	private CategoriaDTO categoria;
-	private int precio;
+	private double precio;
 	private LocalDate fechaDesde;
 	private LocalDate fechaHasta;
 	private EstadoSuscripcionDTO estado;
-	private EstadoSuscripcionDTO estadoCalculado;
 	
 	public PlanCategoriaDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setCategoria(CategoriaDTO.create());
-		setPrecio(UtilInteger.EMPTY);
+		setPrecio(UtilNumber.ZERO.intValue());
 		setFechaDesde(UtilDate.DEFAULT_DATE);
 		setFechaHasta(UtilDate.DEFAULT_DATE);
 		setEstado(EstadoSuscripcionDTO.create());
-		setEstado(EstadoSuscripcionDTO.create());
 	}
-	
 	public PlanCategoriaDTO(UUID identificador, CategoriaDTO categoria, int precio, LocalDate fechaDesde, LocalDate fechaHasta,
-			EstadoSuscripcionDTO estado, EstadoSuscripcionDTO estadoCalculado) {
+			EstadoSuscripcionDTO estado) {
 		super();
 		setIdentificador(identificador);
 		setCategoria(categoria);
@@ -38,7 +35,6 @@ public final class PlanCategoriaDTO {
 		setFechaDesde(fechaDesde);
 		setFechaHasta(fechaHasta);
 		setEstado(estado);
-		setEstado(estadoCalculado);
 	}
 	public static final PlanCategoriaDTO create() {
 		return new PlanCategoriaDTO();
@@ -57,11 +53,11 @@ public final class PlanCategoriaDTO {
 		this.categoria = UtilObject.getDefault(categoria, CategoriaDTO.create());
 		return this;
 	}
-	public final int getPrecio() {
+	public final double getPrecio() {
 		return precio;
 	}
-	public final PlanCategoriaDTO setPrecio(int precio) {
-		this.precio = UtilInteger.getUtilInteger().getDefaultInteger(precio);
+	public final PlanCategoriaDTO setPrecio(double precio) {
+		this.precio = UtilNumber.getUtilNumber().getDefault(precio).doubleValue();
 		return this;
 	}
 	public final LocalDate getFechaDesde() {
@@ -85,13 +81,4 @@ public final class PlanCategoriaDTO {
 		this.estado = UtilObject.getDefault(estado, EstadoSuscripcionDTO.create());
 		return this;
 	}
-	public final EstadoSuscripcionDTO getEstadoCalculado() {
-		return estadoCalculado;
-	}
-	public final PlanCategoriaDTO setEstadoCalculado(EstadoSuscripcionDTO estadoCalculado) {
-		this.estadoCalculado = UtilObject.getDefault(estadoCalculado, EstadoSuscripcionDTO.create());
-		return this;
-	}
-	
-	
 }

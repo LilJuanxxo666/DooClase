@@ -20,23 +20,23 @@ public final class EstadoTipoRelacionInstitucionAssembler
 	}
 
 	@Override
-	public EstadoTipoRelacionInstitucionDTO toDtoFromDomain(EstadoTipoRelacionInstitucionDomain domain) {
+	public EstadoTipoRelacionInstitucionDTO toDtoFromDomain(final EstadoTipoRelacionInstitucionDomain domain) {
 		return EstadoTipoRelacionInstitucionDTO.create().setIdentificador(domain.getIdentificador()).setNombre(domain.getNombre()).
 				setDescripcion(domain.getDescripcion());
 	}
 
 	@Override
-	public EstadoTipoRelacionInstitucionDomain toDomainFromDto(EstadoTipoRelacionInstitucionDTO dto) {
+	public EstadoTipoRelacionInstitucionDomain toDomainFromDto(final EstadoTipoRelacionInstitucionDTO dto) {
 		return new EstadoTipoRelacionInstitucionDomain(dto.getIdentificador(), dto.getNombre(), dto.getDescripcion());
 	}
 
 	@Override
-	public EstadoTipoRelacionInstitucionEntity toEntityFromDomain(EstadoTipoRelacionInstitucionDomain domain) {
+	public EstadoTipoRelacionInstitucionEntity toEntityFromDomain(final EstadoTipoRelacionInstitucionDomain domain) {
 		return new EstadoTipoRelacionInstitucionEntity(domain.getIdentificador(), domain.getNombre(), domain.getDescripcion());
 	}
 
 	@Override
-	public EstadoTipoRelacionInstitucionDomain toDomainFromEntity(EstadoTipoRelacionInstitucionEntity entity) {
+	public EstadoTipoRelacionInstitucionDomain toDomainFromEntity(final EstadoTipoRelacionInstitucionEntity entity) {
 		return new EstadoTipoRelacionInstitucionDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion());
 	}
 }

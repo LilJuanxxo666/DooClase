@@ -7,32 +7,29 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilDate;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public final class PublicacionDTO {
+public final class PublicacionDTO{
 	private UUID identificador;
 	private CategoriaDTO categoria;
 	private TipoAccesoDTO tipoAcceso;
 	private LocalDate fechaPublicacion;
 	private EstadoPublicacionDTO estado;
-	private EstadoPublicacionDTO estadoCalculado;
 	
-	public PublicacionDTO() {
+	public PublicacionDTO(){
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setCategoria(CategoriaDTO.create());
 		setTipoAcceso(TipoAccesoDTO.create());
 		setFechaPublicacion(UtilDate.DEFAULT_DATE);
 		setEstado(EstadoPublicacionDTO.create());
-		setEstadoCalculado(EstadoPublicacionDTO.create());
 	}
 	public PublicacionDTO(UUID identificador, CategoriaDTO categoria, TipoAccesoDTO tipoAcceso,
-			LocalDate fechaPublicacion, EstadoPublicacionDTO estado, EstadoPublicacionDTO estadoCalculado) {
+			LocalDate fechaPublicacion, EstadoPublicacionDTO estado) {
 		super();
 		setIdentificador(identificador);
 		setCategoria(categoria);
 		setTipoAcceso(tipoAcceso);
 		setFechaPublicacion(fechaPublicacion);
 		setEstado(estado);
-		setEstadoCalculado(estadoCalculado);
 	}
 	
 	public static final PublicacionDTO create() {
@@ -73,13 +70,4 @@ public final class PublicacionDTO {
 		this.estado = UtilObject.getDefault(estado, EstadoPublicacionDTO.create());
 		return this;
 	}
-	public final EstadoPublicacionDTO getEstadoCalculado() {
-		return estadoCalculado;
-	}
-	public final PublicacionDTO setEstadoCalculado(EstadoPublicacionDTO estadoCalculado) {
-		this.estadoCalculado = UtilObject.getDefault(estadoCalculado, EstadoPublicacionDTO.create());;
-		return this;
-	}
-	
-	
 }

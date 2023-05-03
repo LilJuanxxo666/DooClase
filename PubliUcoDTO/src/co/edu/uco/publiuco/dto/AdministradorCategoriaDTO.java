@@ -1,8 +1,7 @@
 package co.edu.uco.publiuco.dto;
 
 import java.util.UUID;
-
-import co.edu.uco.publiuco.crosscutting.utils.UtilInteger;
+import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
@@ -22,31 +21,28 @@ public final class AdministradorCategoriaDTO{
 	private RespuestaDTO correoConfirmado;
 	private RespuestaDTO telefonoConfirmado;
 	private EstadoAdministradorCategoriaDTO estado;
-	private EstadoAdministradorCategoriaDTO estadoCalculo;
 	
 	public AdministradorCategoriaDTO(){
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setTipoIdentifiacion(TipoIdentificacionDTO.create());
-		setNumeroIdentificacion(UtilInteger.EMPTY);
+		setNumeroIdentificacion(UtilNumber.ZERO.intValue());
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoApellido(UtilText.EMPTY);
 		setCorreo(UtilText.EMPTY);
 		setIndicadorPaisTelefono(UtilText.EMPTY);
-		setTelefono(UtilInteger.EMPTY);
+		setTelefono(UtilNumber.ZERO.intValue());
 		setRelacionInstitucion(TipoRelacionInstitucionDTO.create());
 		setCorreoConfirmado(RespuestaDTO.create());
 		setTelefonoConfirmado(RespuestaDTO.create());
 		setEstado(EstadoAdministradorCategoriaDTO.create());
-		setEstadoCalculo(EstadoAdministradorCategoriaDTO.create());
 	}
 	public AdministradorCategoriaDTO(UUID identificador, TipoIdentificacionDTO tipoIdentifiacion,
 			int numeroIdentificacion, String primerNombre, String segundoNombre, String primerApellido,
 			String segundoApellido, String correo, String indicadorPaisTelefono, int telefono,
 			TipoRelacionInstitucionDTO relacionInstitucion, RespuestaDTO correoConfirmado,
-			RespuestaDTO telefonoConfirmado, EstadoAdministradorCategoriaDTO estado,
-			EstadoAdministradorCategoriaDTO estadoCalculo) {
+			RespuestaDTO telefonoConfirmado, EstadoAdministradorCategoriaDTO estado) {
 		super();
 		setIdentificador(identificador);
 		setTipoIdentifiacion(tipoIdentifiacion);
@@ -62,7 +58,6 @@ public final class AdministradorCategoriaDTO{
 		setCorreoConfirmado(correoConfirmado);
 		setTelefonoConfirmado(telefonoConfirmado);
 		setEstado(estado);
-		setEstadoCalculo(estadoCalculo);
 	}
 	
 	public static final AdministradorCategoriaDTO create(){
@@ -96,7 +91,7 @@ public final class AdministradorCategoriaDTO{
 
 
 	public final AdministradorCategoriaDTO setNumeroIdentificacion(int numeroIdentificacion) {
-		this.numeroIdentificacion = UtilInteger.getUtilInteger().getDefaultInteger(numeroIdentificacion);
+		this.numeroIdentificacion = UtilNumber.getUtilNumber().getDefault(telefono).intValue();
 		return this;
 	}
 
@@ -171,7 +166,7 @@ public final class AdministradorCategoriaDTO{
 	}
 
 	public final AdministradorCategoriaDTO setTelefono(int telefono) {
-		this.telefono = UtilInteger.getUtilInteger().getDefaultInteger(telefono);
+		this.telefono = UtilNumber.getUtilNumber().getDefault(telefono).intValue();
 		return this;
 	}
 
@@ -208,15 +203,6 @@ public final class AdministradorCategoriaDTO{
 
 	public final AdministradorCategoriaDTO setEstado(EstadoAdministradorCategoriaDTO estado) {
 		this.estado = UtilObject.getDefault(estado, EstadoAdministradorCategoriaDTO.create());
-		return this;
-	}
-
-	public final EstadoAdministradorCategoriaDTO getEstadoCalculo() {
-		return estadoCalculo;
-	}
-
-	public final AdministradorCategoriaDTO setEstadoCalculo(EstadoAdministradorCategoriaDTO estadoCalculo) {
-		this.estadoCalculo = UtilObject.getDefault(estadoCalculo, EstadoAdministradorCategoriaDTO.create());
 		return this;
 	}
 }

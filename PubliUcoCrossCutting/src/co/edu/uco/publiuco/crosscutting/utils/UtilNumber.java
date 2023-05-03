@@ -3,7 +3,7 @@ package co.edu.uco.publiuco.crosscutting.utils;
 public class UtilNumber{
 	
 	private static final UtilNumber INSTANCE = new UtilNumber();
-	public static final byte ZERO = 0;
+	public static final Number ZERO = 0;
 	
 	private UtilNumber(){
 		super();
@@ -12,12 +12,12 @@ public class UtilNumber{
 		return INSTANCE;
 	}
 	
-	public final boolean isNull(final byte numero) {
+	public final boolean isNull(final Number numero) {
 		return UtilObject.isNull(numero);
 	}
 	
-	public final <T extends Number> Number getDefault(final byte number, final byte defaultValue) {	
-		byte result = number;
+	public final Number getDefault(final Number number, final Number defaultValue) {	
+		Number result = number;
 		
 		if(isNull(number)) {
 			result = isNull(defaultValue) ? ZERO : defaultValue;
@@ -25,7 +25,7 @@ public class UtilNumber{
 		return result;
 	}
 	
-	public final <T extends Number> Number getDefault(final byte number) {
-		return getDefault(number, ZERO).byteValue();
+	public final Number getDefault(final Number number) {
+		return getDefault(number, ZERO);
 	}
 }
