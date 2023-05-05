@@ -41,11 +41,10 @@ public final class SqlServerDAOFactory extends DAOFactory{
 
 	@Override
 	public void cancelarTransaccion() {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public EstadoTipoRelacionInstitucionDAO getEstadoRelacionInstitucionDAO() {
+	public EstadoTipoRelacionInstitucionDAO getEstadoTipoRelacionInstitucionDAO() {
 		return new EstadoTipoRelacionInstitucionSqlServerDAO(connection);
 	}
 

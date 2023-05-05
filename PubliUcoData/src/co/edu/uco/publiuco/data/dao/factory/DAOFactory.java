@@ -35,7 +35,7 @@ public abstract class DAOFactory{
 	
 	public abstract void cancelarTransaccion();
 
-	public abstract EstadoTipoRelacionInstitucionDAO getEstadoRelacionInstitucionDAO();
+	public abstract EstadoTipoRelacionInstitucionDAO getEstadoTipoRelacionInstitucionDAO();
 	
 	public abstract TipoRelacionInstitucionDAO getTipoRelacionInstitucionDAO();
 }

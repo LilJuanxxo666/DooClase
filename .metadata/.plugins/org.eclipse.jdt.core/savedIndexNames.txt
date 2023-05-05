@@ -1,6 +1,5 @@
 INDEX VERSION 1.132+C:\WorkSpace\Eclipse\WorkSpaceEclipse\PubliUco\.metadata\.plugins\org.eclipse.jdt.core
 1569335442.index
-2198332665.index
 3677941284.index
 1865797976.index
 1203874273.index

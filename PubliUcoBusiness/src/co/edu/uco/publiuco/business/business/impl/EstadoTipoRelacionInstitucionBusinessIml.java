@@ -2,6 +2,7 @@ package co.edu.uco.publiuco.business.business.impl;
 
 import java.util.List;
 
+
 import co.edu.uco.publiuco.business.assembler.concrete.EstadoTipoRelacionInstitucionAssembler;
 import co.edu.uco.publiuco.business.business.EstadoTipoRelacionInstitucionBusiness;
 import co.edu.uco.publiuco.business.domain.EstadoTipoRelacionInstitucionDomain;
@@ -20,22 +21,26 @@ public final class EstadoTipoRelacionInstitucionBusinessIml implements EstadoTip
 	public void register(EstadoTipoRelacionInstitucionDomain domain) {
 		final EstadoTipoRelacionInstitucionEntity entity = EstadoTipoRelacionInstitucionAssembler.getInstance().
 				toEntityFromDomain(domain);
-		daoFactory.getEstadoRelacionInstitucionDAO().create(entity);
+		daoFactory.getEstadoTipoRelacionInstitucionDAO().create(entity);
 	}
 
 	@Override
-	public List<EstadoTipoRelacionInstitucionDomain> list(EstadoTipoRelacionInstitucionDomain domain) {
-		final EstadoTipoRelacionInstitucionEntity entity = EstadoTipoRelacionInstitucionAssembler.getInstance().
-				toEntityFromDomain(domain);
-		final List<EstadoTipoRelacionInstitucionEntity> result = daoFactory.getEstadoRelacionInstitucionDAO().read(entity);
-		return null;
-	}
+	public final List<EstadoTipoRelacionInstitucionDomain> list(final EstadoTipoRelacionInstitucionDomain domain) {
+
+        final EstadoTipoRelacionInstitucionEntity entity = EstadoTipoRelacionInstitucionAssembler.getInstance()
+                .toEntityFromDomain(domain);
+
+        List<EstadoTipoRelacionInstitucionEntity> resultEntityList = daoFactory.getEstadoTipoRelacionInstitucionDAO()
+                .read(entity);
+
+        return EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
+    }
 
 	@Override
 	public void modify(EstadoTipoRelacionInstitucionDomain domain) {
 		final EstadoTipoRelacionInstitucionEntity entity = EstadoTipoRelacionInstitucionAssembler.getInstance().
 				toEntityFromDomain(domain);
-		daoFactory.getEstadoRelacionInstitucionDAO().update(entity);
+		daoFactory.getEstadoTipoRelacionInstitucionDAO().update(entity);
 
 	}
 
@@ -43,6 +48,6 @@ public final class EstadoTipoRelacionInstitucionBusinessIml implements EstadoTip
 	public void drop(EstadoTipoRelacionInstitucionDomain domain) {
 		final EstadoTipoRelacionInstitucionEntity entity = EstadoTipoRelacionInstitucionAssembler.getInstance().
 				toEntityFromDomain(domain);
-		daoFactory.getEstadoRelacionInstitucionDAO().delete(entity);
+		daoFactory.getEstadoTipoRelacionInstitucionDAO().delete(entity);
 	}
 }
