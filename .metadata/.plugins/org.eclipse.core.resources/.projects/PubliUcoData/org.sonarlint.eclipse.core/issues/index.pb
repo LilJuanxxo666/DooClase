@@ -17,3 +17,13 @@ Vsrc/co/edu/uco/publiuco/data/dao/factory/relational/sqlserver/SqlServerDAOFacto
 Xsrc/co/edu/uco/publiuco/data/dao/factory/relational/postgresql/PostgreSqlDAOFactory.java,9\c\9cd3518ce59eeba92bc6007238593f2292802118
 h
 8src/co/edu/uco/publiuco/data/dao/factory/DAOFactory.java,b\9\b9024e731f017a85a7247d1e8f17b17202037e3a
+o
+?src/co/edu/uco/publiuco/data/dao/AdministradorCategoriaDAO.java,1\1\1193a6a533f13e20df5f28a356bd00215495d6a5
+e
+5src/co/edu/uco/publiuco/data/dao/CalificacionDAO.java,4\3\437f522f808363a6b8d1880eb3a255ada694f202
+j
+:src/co/edu/uco/publiuco/data/dao/ComentarioRevisorDAO.java,c\3\c3f0037fd7440dd28973a16d567ec12d68561af3
+b
+2src/co/edu/uco/publiuco/data/dao/CategoriaDAO.java,2\0\206f4142a287251be2eb3e66d6a9f995f44db03a
+a
+1src/co/edu/uco/publiuco/data/dao/EscritorDAO.java,1\6\162faf075a4ec90e79edec3903da53de34ae2741

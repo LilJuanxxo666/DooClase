@@ -15,20 +15,19 @@ public final class UtilSql {
 	public static boolean connectionIsOpen(final Connection connection) {
 		if (UtilObject.isNull(connection)) {
 			var userMessage = UtilSqlMessages.CONNECTION_IS_OPEN_USER_MESSAGE;
-			var technicalMessage = "";
+			var technicalMessage = UtilSqlMessages.CONNECTION_IS_OPEN_TECHNICAL_NULL_CONNECTION;
 			throw PubliUcoCrossCuttingException.create(technicalMessage, userMessage);
 		}
 		try {
 			return !connection.isClosed();
 		} catch (final SQLException exception) {
-			var userMessage = "Se ha presentado un problema tratando de validar si una conexion estaba o no activa";
-			var technicalMessage = "";
+			var userMessage = UtilSqlMessages.CONNECTION_IS_OPEN_USER_MESSAGE;
+			var technicalMessage = UtilSqlMessages.CONNECTION_IS_OPEN_TECHNICAL_SQL_EXCEPTION;
 			
 			throw PubliUcoCrossCuttingException.create(userMessage, technicalMessage, exception);
 		}catch (final Exception exception) {
-			var userMessage = "Se ha presentado un problema tratando de validar si una conexion estaba o no activa";
-			var technicalMessage = "Se ha presentado una exception inesperada de tipo Exception, tratando de validar "
-					+ "si la conexion estaba o no abierta. Porfavor valide la traza de errores completa de la exception presentada...";
+			var userMessage = UtilSqlMessages.CONNECTION_IS_OPEN_USER_MESSAGE;
+			var technicalMessage = UtilSqlMessages.CONNECTION_IS_OPEN_TECHNICAL_EXCEPTION;
 			
 			throw PubliUcoCrossCuttingException.create(userMessage, technicalMessage, exception);
 		}
@@ -40,16 +39,37 @@ public final class UtilSql {
 			}
 		}catch (PubliUcoCrossCuttingException exception) {
 			throw exception;
-		}
-		catch (final SQLException exception) {
-			var userMessage = "Se ha presentado un problema tratando de validar si una conexion estaba o no activa";
-			var technicalMessage = "";
+		}catch (final SQLException exception) {
+			var userMessage =  UtilSqlMessages.CONNECTION_IS_CLOSE_USER_MESSAGE;
+			var technicalMessage = UtilSqlMessages.CONNECTION_IS_CLOSE_TECHNICAL_SQL_EXCEPTION;
 			
 		throw PubliUcoCrossCuttingException.create(userMessage, technicalMessage, exception);
 		}catch (final Exception exception) {
-			var userMessage = "Se ha presentado un problema tratando de validar si una conexion estaba o no activa";
-			var technicalMessage = "Se ha presentado una exception inesperada de tipo Exception, tratando de validar "
-					+ "si la conexion estaba o no abierta. Porfavor valide la traza de errores completa de la exception presentada...";
+			var userMessage = UtilSqlMessages.CONNECTION_IS_CLOSE_USER_MESSAGE;
+			var technicalMessage = UtilSqlMessages.CONNECTION_IS_CLOSE_TECHNICAL_EXCEPTION;
+			
+			throw PubliUcoCrossCuttingException.create(userMessage, technicalMessage, exception);
+		}
+	}
+	public static final void initCommitIsReady(final Connection connection) {
+		
+		try {
+			connectionIsOpen(connection);
+			if(connection.getAutoCommit()) {
+				var userMessage = UtilSqlMessages.COMMIT_IS_STARTED_USER_MESSAGE;
+				var technicalMessage = UtilSqlMessages.COMMIT_IS_STARTED_TECHNICAL_AUTOCOMMIT;
+				throw PubliUcoCrossCuttingException.create(technicalMessage, userMessage);
+			}
+		}catch (PubliUcoCrossCuttingException exception) {
+			throw exception;
+		}catch (SQLException exception) {
+			var userMessage = UtilSqlMessages.COMMIT_IS_STARTED_USER_MESSAGE;
+			var technicalMessage = UtilSqlMessages.COMMIT_IS_STARTED_TECHNICAL_SQL_EXCEPTION;
+			
+			throw PubliUcoCrossCuttingException.create(technicalMessage, userMessage, exception);
+		}catch (final Exception exception) {
+			var userMessage = UtilSqlMessages.COMMIT_IS_STARTED_USER_MESSAGE;
+			var technicalMessage = UtilSqlMessages.COMMIT_IS_STARTED_TECHNICAL_EXCEPTION;
 			
 			throw PubliUcoCrossCuttingException.create(userMessage, technicalMessage, exception);
 		}

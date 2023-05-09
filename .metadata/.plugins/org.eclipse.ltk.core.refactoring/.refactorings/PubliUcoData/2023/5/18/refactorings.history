@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;co.edu.uco.publiuco.data.dao.EstadoAdministracionCategoriaDAO.java&apos; to &apos;EstadoAdministradorCategoriaDAO.java&apos;&#x0D;&#x0A;- Original project: &apos;PubliUcoData&apos;&#x0D;&#x0A;- Original element: &apos;co.edu.uco.publiuco.data.dao.EstadoAdministracionCategoriaDAO.java&apos;&#x0D;&#x0A;- Renamed element: &apos;co.edu.uco.publiuco.data.dao.EstadoAdministradorCategoriaDAO.java&apos;" description="Rename compilation unit &apos;EstadoAdministracionCategoriaDAO.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.data.dao{EstadoAdministracionCategoriaDAO.java" name="EstadoAdministradorCategoriaDAO.java" references="false" stamp="1683499279116" version="1.0"/>
+</session>

@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.TipoRevisionDomain;
 import co.edu.uco.publiuco.dto.TipoRevisionDTO;
@@ -36,5 +38,10 @@ public final class TipoRevisionAssembler implements Assembler<TipoRevisionDomain
 	@Override
 	public TipoRevisionDomain toDomainFromEntity(final TipoRevisionEntity entity) {
 		return new TipoRevisionDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion());
+	}
+
+	@Override
+	public List<TipoRevisionDomain> toDomainListFromEntityList(List<TipoRevisionEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

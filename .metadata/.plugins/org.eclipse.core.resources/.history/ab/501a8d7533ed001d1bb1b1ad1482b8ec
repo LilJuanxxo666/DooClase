@@ -1,0 +1,16 @@
+package co.edu.uco.publiuco.data.dao.relational.sqlserver;
+
+import java.util.List;
+
+import co.edu.uco.publiuco.data.dao.RespuestaDAO;
+import co.edu.uco.publiuco.entities.RespuestaEntity;
+
+public class RespuestaSqlServerDAO implements RespuestaDAO{
+
+	@Override
+	public List<RespuestaEntity> read(RespuestaEntity entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

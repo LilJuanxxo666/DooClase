@@ -1,0 +1,34 @@
+package co.edu.uco.publiuco.data.dao.relational.sqlserver;
+
+import java.util.List;
+
+import co.edu.uco.publiuco.data.dao.EscritorPublicacionDAO;
+import co.edu.uco.publiuco.entities.EscritorPublicacionEntity;
+
+public class EscritorPublicacionSqlServerDAO implements EscritorPublicacionDAO{
+
+	@Override
+	public void create(EscritorPublicacionEntity entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<EscritorPublicacionEntity> read(EscritorPublicacionEntity entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(EscritorPublicacionEntity entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(EscritorPublicacionEntity entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

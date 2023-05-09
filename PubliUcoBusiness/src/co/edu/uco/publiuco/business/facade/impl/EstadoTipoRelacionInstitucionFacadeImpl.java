@@ -51,25 +51,7 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 
 	@Override
 	public List<EstadoTipoRelacionInstitucionDTO> list(EstadoTipoRelacionInstitucionDTO dto) {
-		try {
-			daoFactory.iniciarTransaccion();
-			final EstadoTipoRelacionInstitucionDomain domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
-			
-			business.list(domain);
-			
-			daoFactory.confirmarTransaccion();
-			
-		}catch(PubliUcoException exception){
-			daoFactory.cancelarTransaccion();
-			throw exception;
-		}catch(Exception exception) {
-			daoFactory.cancelarTransaccion();
-			
-			
-			throw PubliUcoBusinessException.create(technicalMessage, userMessage, exception);
-		}finally {
-			daoFactory.cerrarConexion();
-		}
+		
 		return null;
 	}
 

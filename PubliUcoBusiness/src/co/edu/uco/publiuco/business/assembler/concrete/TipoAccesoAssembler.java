@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.TipoAccesoDomain;
 import co.edu.uco.publiuco.dto.TipoAccesoDTO;
@@ -39,5 +41,10 @@ public final class TipoAccesoAssembler implements Assembler<TipoAccesoDomain, Ti
 	public TipoAccesoDomain toDomainFromEntity(final TipoAccesoEntity entity) {
 		return new TipoAccesoDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion(),
 				EstadoTipoAccesoAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<TipoAccesoDomain> toDomainListFromEntityList(List<TipoAccesoEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

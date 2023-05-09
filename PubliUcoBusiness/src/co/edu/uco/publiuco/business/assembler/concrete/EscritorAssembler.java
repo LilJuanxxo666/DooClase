@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.EscritorDomain;
 import co.edu.uco.publiuco.dto.EscritorDTO;
@@ -65,6 +67,11 @@ public final class EscritorAssembler implements Assembler<EscritorDomain, Escrit
 				RespuestaAssembler.getInstance().toDomainFromEntity(entity.getCorreoConfirmado()),
 				RespuestaAssembler.getInstance().toDomainFromEntity(entity.getTelefonoConfirmado()),
 				EstadoEscritorAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<EscritorDomain> toDomainListFromEntityList(List<EscritorEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }
 

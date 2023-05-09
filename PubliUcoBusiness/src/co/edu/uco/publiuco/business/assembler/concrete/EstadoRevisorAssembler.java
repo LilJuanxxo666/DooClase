@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.EstadoRevisorDomain;
 import co.edu.uco.publiuco.dto.EstadoRevisorDTO;
@@ -36,5 +38,10 @@ public final class EstadoRevisorAssembler implements Assembler<EstadoRevisorDoma
 	@Override
 	public EstadoRevisorDomain toDomainFromEntity(final EstadoRevisorEntity entity) {
 		return new EstadoRevisorDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion());
+	}
+
+	@Override
+	public List<EstadoRevisorDomain> toDomainListFromEntityList(List<EstadoRevisorEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.RevisorRevisionDomain;
 import co.edu.uco.publiuco.dto.RevisorRevisionDTO;
@@ -53,6 +55,11 @@ public final class RevisorRevisionAssembler
 				RevisorAssembler.getInstance().toDomainFromEntity(entity.getRevisor()), entity.getFechaAsignacionRevision(),
 				entity.getFechaCompletitudRevision(),
 				EstadoRevisionAssembler.getInstance().toDomainFromEntity(entity.getEstadoRevision()));
+	}
+
+	@Override
+	public List<RevisorRevisionDomain> toDomainListFromEntityList(List<RevisorRevisionEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 }

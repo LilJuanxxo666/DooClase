@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.SuscripcionCategoriaDomain;
 import co.edu.uco.publiuco.dto.SuscripcionCategoriaDTO;
@@ -48,5 +50,10 @@ public final class SuscripcionCategoriaAssembler
 				PerfilAssembler.getInstance().toDomainFromEntity(entity.getPerfil()),
 				PlanCategoriaAssembler.getInstance().toDomainFromEntity(entity.getPlanCategoria()),
 				EstadoSuscripcionAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<SuscripcionCategoriaDomain> toDomainListFromEntityList(List<SuscripcionCategoriaEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

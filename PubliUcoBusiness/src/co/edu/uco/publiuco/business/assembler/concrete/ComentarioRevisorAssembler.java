@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.ComentarioRevisorDomain;
 import co.edu.uco.publiuco.dto.ComentarioRevisorDTO;
@@ -49,6 +51,11 @@ public final class ComentarioRevisorAssembler
 				RevisorRevisionAssembler.getInstance().toDomainFromEntity(entity.getRevisorRevision()),
 				TipoComentarioRevisorAssembler.getInstance().toDomainFromEntity(entity.getTipoComentarioRevisor()),
 				entity.getComentario());
+	}
+
+	@Override
+	public List<ComentarioRevisorDomain> toDomainListFromEntityList(List<ComentarioRevisorEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 }

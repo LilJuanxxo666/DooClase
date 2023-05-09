@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.EstadoLectorDomain;
 import co.edu.uco.publiuco.dto.EstadoLectorDTO;
@@ -36,5 +38,10 @@ public final class EstadoLectorAssembler implements Assembler<EstadoLectorDomain
 	@Override
 	public EstadoLectorDomain toDomainFromEntity(final EstadoLectorEntity entity) {
 		return new EstadoLectorDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion());
+	}
+
+	@Override
+	public List<EstadoLectorDomain> toDomainListFromEntityList(List<EstadoLectorEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

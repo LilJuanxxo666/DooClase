@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.ReporteDomain;
 import co.edu.uco.publiuco.dto.ReporteDTO;
@@ -48,5 +50,10 @@ public final class ReporteAssembler implements Assembler<ReporteDomain, ReporteD
 				ComentarioLectorAssembler.getInstance().toDomainFromEntity(entity.getComentario()),
 				TipoReporteAssembler.getInstance().toDomainFromEntity(entity.getTipoReporte()), entity.getRazon(),
 				entity.getFechaReporte());
+	}
+
+	@Override
+	public List<ReporteDomain> toDomainListFromEntityList(List<ReporteEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

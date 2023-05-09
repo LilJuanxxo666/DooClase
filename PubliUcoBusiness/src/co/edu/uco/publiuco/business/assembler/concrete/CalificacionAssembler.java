@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.CalificacionDomain;
 import co.edu.uco.publiuco.dto.CalificacionDTO;
@@ -47,6 +49,11 @@ public final class CalificacionAssembler implements Assembler<CalificacionDomain
 				LectorAssembler.getInstance().toDomainFromEntity(entity.getLector()),
 				PublicacionAssembler.getInstance().toDomainFromEntity(entity.getPublicacion()),
 				entity.getFechaCalificacion(), entity.getCalificacion());
+	}
+
+	@Override
+	public List<CalificacionDomain> toDomainListFromEntityList(List<CalificacionEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 }

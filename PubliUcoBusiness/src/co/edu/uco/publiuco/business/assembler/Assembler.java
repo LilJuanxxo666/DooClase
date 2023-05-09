@@ -7,5 +7,5 @@ public interface Assembler<D, T, E> {
 	D toDomainFromDto(T dto);
 	E toEntityFromDomain(D domain);
 	D toDomainFromEntity(E entity);
-	List<D> toDomainListFromEntityList(List<E> entity);
+	List<D> toDomainListFromEntityList(List<E> entityList);
 }

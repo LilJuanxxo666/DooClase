@@ -1,0 +1,34 @@
+package co.edu.uco.publiuco.data.dao.relational.sqlserver;
+
+import java.util.List;
+
+import co.edu.uco.publiuco.data.dao.CategoriaAdministradorCategoriaDAO;
+import co.edu.uco.publiuco.entities.CategoriaAdministradorCategoriaEntity;
+
+public class CategoriaAdministradorCategoriaSqlServerDAO implements CategoriaAdministradorCategoriaDAO{
+
+	@Override
+	public void create(CategoriaAdministradorCategoriaEntity entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<CategoriaAdministradorCategoriaEntity> read(CategoriaAdministradorCategoriaEntity entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(CategoriaAdministradorCategoriaEntity entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(CategoriaAdministradorCategoriaEntity entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

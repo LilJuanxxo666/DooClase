@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.PreferenciaCategoriaDomain;
 import co.edu.uco.publiuco.dto.PreferenciaCategoriaDTO;
@@ -44,5 +46,10 @@ public final class PreferenciaCategoriaAssembler
 		return new PreferenciaCategoriaDomain(entity.getIdentificador(),
 				PerfilAssembler.getInstance().toDomainFromEntity(entity.getPerfil()),
 				CategoriaAssembler.getInstance().toDomainFromEntity(entity.getCategoria()));
+	}
+
+	@Override
+	public List<PreferenciaCategoriaDomain> toDomainListFromEntityList(List<PreferenciaCategoriaEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

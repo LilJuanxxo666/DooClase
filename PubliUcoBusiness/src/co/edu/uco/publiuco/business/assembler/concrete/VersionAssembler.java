@@ -1,11 +1,13 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.VersionDomain;
 import co.edu.uco.publiuco.dto.VersionDTO;
 import co.edu.uco.publiuco.entities.VersionEntity;
 
-public class VersionAssembler implements Assembler<VersionDomain, VersionDTO, VersionEntity> {
+public final class VersionAssembler implements Assembler<VersionDomain, VersionDTO, VersionEntity> {
 
 	private static final Assembler<VersionDomain, VersionDTO, VersionEntity> INSTANCE = new VersionAssembler();
 
@@ -53,6 +55,11 @@ public class VersionAssembler implements Assembler<VersionDomain, VersionDTO, Ve
 				VersionAssembler.getInstance().toDomainFromEntity(entity.getVersionAnterior()), entity.getNumeroVersion(),
 				entity.getFechaCreacion(), entity.getFechaUltimaModificacion(), entity.getTitulo(), entity.getResumen(),
 				entity.getCuerpo(), EstadoPublicacionAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<VersionDomain> toDomainListFromEntityList(List<VersionEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 }

@@ -1,11 +1,13 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.ObservacionRevisionDomain;
 import co.edu.uco.publiuco.dto.ObservacionRevisionDTO;
 import co.edu.uco.publiuco.entities.ObservacionRevisionEntity;
 
-public class ObservacionRevisionAssembler
+public final class ObservacionRevisionAssembler
 		implements Assembler<ObservacionRevisionDomain, ObservacionRevisionDTO, ObservacionRevisionEntity> {
 
 	private static final Assembler<ObservacionRevisionDomain, ObservacionRevisionDTO, ObservacionRevisionEntity> INSTANCE = new ObservacionRevisionAssembler();
@@ -58,6 +60,11 @@ public class ObservacionRevisionAssembler
 				entity.getFechaReporteObservacion(), entity.getFechaRevisionObservacion(),
 				EstadoObservacionRevisorAssembler.getInstance().toDomainFromEntity(entity.getEstado()),
 				entity.getObservacion());
+	}
+
+	@Override
+	public List<ObservacionRevisionDomain> toDomainListFromEntityList(List<ObservacionRevisionEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 }

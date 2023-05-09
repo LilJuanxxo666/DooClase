@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.LectorDomain;
 import co.edu.uco.publiuco.dto.LectorDTO;
@@ -66,5 +68,10 @@ public final class LectorAssembler implements Assembler<LectorDomain, LectorDTO,
 				RespuestaAssembler.getInstance().toDomainFromEntity(entity.getCorreoConfirmado()),
 				RespuestaAssembler.getInstance().toDomainFromEntity(entity.getTelefonoConfirmado()),
 				EstadoLectorAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<LectorDomain> toDomainListFromEntityList(List<LectorEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

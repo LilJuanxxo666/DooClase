@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.CategoriaAdministradorCategoriaDomain;
 import co.edu.uco.publiuco.dto.CategoriaAdministradorCategoriaDTO;
@@ -45,5 +47,11 @@ public final class CategoriaAdministradorCategoriaAssembler implements
 				CategoriaAssembler.getInstance().toDomainFromEntity(entity.getCategoria()),
 				AdministradorCategoriaAssembler.getInstance().toDomainFromEntity(entity.getAdministradorCategoria()), 
 				EstadoCategoriaAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<CategoriaAdministradorCategoriaDomain> toDomainListFromEntityList(
+			List<CategoriaAdministradorCategoriaEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }

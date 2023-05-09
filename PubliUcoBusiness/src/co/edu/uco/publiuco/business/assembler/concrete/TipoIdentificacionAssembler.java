@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.TipoIdentificacionDomain;
 import co.edu.uco.publiuco.dto.TipoIdentificacionDTO;
@@ -40,5 +42,10 @@ public final class TipoIdentificacionAssembler
 	public TipoIdentificacionDomain toDomainFromEntity(final TipoIdentificacionEntity entity) {
 		return new TipoIdentificacionDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion(),
 				EstadoTipoIdentificacionAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<TipoIdentificacionDomain> toDomainListFromEntityList(List<TipoIdentificacionEntity> entityList) {
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 }
