@@ -48,4 +48,10 @@ public final class EstadoObservacionRevisorAssembler implements
 			List<EstadoObservacionRevisorEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<EstadoObservacionRevisorDTO> toDtoListFromDomainList(List<EstadoObservacionRevisorDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

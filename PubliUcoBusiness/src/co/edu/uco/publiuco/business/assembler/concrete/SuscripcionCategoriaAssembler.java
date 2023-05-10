@@ -56,4 +56,10 @@ public final class SuscripcionCategoriaAssembler
 	public List<SuscripcionCategoriaDomain> toDomainListFromEntityList(List<SuscripcionCategoriaEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<SuscripcionCategoriaDTO> toDtoListFromDomainList(List<SuscripcionCategoriaDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

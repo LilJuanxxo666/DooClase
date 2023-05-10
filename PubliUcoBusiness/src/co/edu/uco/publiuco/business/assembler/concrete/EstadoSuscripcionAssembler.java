@@ -45,6 +45,12 @@ public final class EstadoSuscripcionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<EstadoSuscripcionDTO> toDtoListFromDomainList(List<EstadoSuscripcionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 
 }

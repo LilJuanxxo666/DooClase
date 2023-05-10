@@ -67,4 +67,10 @@ public final class ObservacionRevisionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<ObservacionRevisionDTO> toDtoListFromDomainList(List<ObservacionRevisionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

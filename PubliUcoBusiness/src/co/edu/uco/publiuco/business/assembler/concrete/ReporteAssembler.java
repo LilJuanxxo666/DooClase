@@ -56,4 +56,10 @@ public final class ReporteAssembler implements Assembler<ReporteDomain, ReporteD
 	public List<ReporteDomain> toDomainListFromEntityList(List<ReporteEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<ReporteDTO> toDtoListFromDomainList(List<ReporteDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

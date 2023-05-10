@@ -44,4 +44,10 @@ public final class EstadoLectorAssembler implements Assembler<EstadoLectorDomain
 	public List<EstadoLectorDomain> toDomainListFromEntityList(List<EstadoLectorEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<EstadoLectorDTO> toDtoListFromDomainList(List<EstadoLectorDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -45,4 +45,10 @@ public final class EstadoPreferenciaAssembler
 	public List<EstadoPreferenciaDomain> toDomainListFromEntityList(List<EstadoPreferenciaEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<EstadoPreferenciaDTO> toDtoListFromDomainList(List<EstadoPreferenciaDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

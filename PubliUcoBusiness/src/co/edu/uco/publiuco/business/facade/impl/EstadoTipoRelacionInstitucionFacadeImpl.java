@@ -2,10 +2,10 @@ package co.edu.uco.publiuco.business.facade.impl;
 
 import java.util.List;
 
+
 import co.edu.uco.publiuco.business.assembler.concrete.EstadoTipoRelacionInstitucionAssembler;
 import co.edu.uco.publiuco.business.business.EstadoTipoRelacionInstitucionBusiness;
 import co.edu.uco.publiuco.business.business.impl.EstadoTipoRelacionInstitucionBusinessIml;
-import co.edu.uco.publiuco.business.domain.EstadoTipoRelacionInstitucionDomain;
 import co.edu.uco.publiuco.business.facade.EstadoTipoRelacionInstitucionFacade;
 import co.edu.uco.publiuco.crosscutting.exception.PubliUcoBusinessException;
 import co.edu.uco.publiuco.crosscutting.exception.PubliUcoException;
@@ -27,11 +27,9 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 	@Override
 	public void register(final EstadoTipoRelacionInstitucionDTO dto) {
 		try {
+			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
 			daoFactory.iniciarTransaccion();
-			final EstadoTipoRelacionInstitucionDomain domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
-					
 			business.register(domain);
-
 			daoFactory.confirmarTransaccion();
 
 		} catch (PubliUcoException exception) {
@@ -51,20 +49,67 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 
 	@Override
 	public List<EstadoTipoRelacionInstitucionDTO> list(EstadoTipoRelacionInstitucionDTO dto) {
-		
-		return null;
+		try {
+			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
+			final var returnDomainList = business.list(domain);
+			
+			return EstadoTipoRelacionInstitucionAssembler.getInstance().toDtoListFromDomainList(returnDomainList);
+		}catch (final PubliUcoException exception) {
+			throw exception;
+		}catch (final Exception exception) {
+			var userMessage = "";
+			var technicalMessage = "";
+			
+			throw PubliUcoBusinessException.create(userMessage, technicalMessage, exception);
+		}finally {
+			daoFactory.cerrarConexion();
+		}
 	}
 
 	@Override
 	public void modify(EstadoTipoRelacionInstitucionDTO dto) {
-		// TODO Auto-generated method stub
+		try {
+			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
+			daoFactory.iniciarTransaccion();
+			business.modify(domain);
+			daoFactory.confirmarTransaccion();
 
+		} catch (PubliUcoException exception) {
+			daoFactory.cancelarTransaccion();
+			throw exception;
+		} catch (Exception exception) {
+			daoFactory.cancelarTransaccion();
+
+			var userMessage = "";
+			var technicalMessage = "";
+
+			throw PubliUcoBusinessException.create(technicalMessage, userMessage, exception);
+		} finally {
+			daoFactory.cerrarConexion();
+		}
 	}
 
 	@Override
 	public void drop(EstadoTipoRelacionInstitucionDTO dto) {
-		// TODO Auto-generated method stub
+		try {
+			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
+			daoFactory.iniciarTransaccion();
+			business.drop(domain);
+			daoFactory.confirmarTransaccion();
 
+		} catch (PubliUcoException exception) {
+			daoFactory.cancelarTransaccion();
+			throw exception;
+		} catch (Exception exception) {
+			daoFactory.cancelarTransaccion();
+
+			var userMessage = "";
+			var technicalMessage = "";
+
+			throw PubliUcoBusinessException.create(technicalMessage, userMessage, exception);
+		} finally {
+			daoFactory.cerrarConexion();
+		}
 	}
 
 }

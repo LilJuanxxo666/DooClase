@@ -47,4 +47,10 @@ public final class TipoAccesoAssembler implements Assembler<TipoAccesoDomain, Ti
 	public List<TipoAccesoDomain> toDomainListFromEntityList(List<TipoAccesoEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<TipoAccesoDTO> toDtoListFromDomainList(List<TipoAccesoDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

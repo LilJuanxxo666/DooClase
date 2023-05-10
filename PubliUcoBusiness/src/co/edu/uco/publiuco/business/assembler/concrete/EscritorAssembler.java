@@ -73,5 +73,11 @@ public final class EscritorAssembler implements Assembler<EscritorDomain, Escrit
 	public List<EscritorDomain> toDomainListFromEntityList(List<EscritorEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<EscritorDTO> toDtoListFromDomainList(List<EscritorDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 

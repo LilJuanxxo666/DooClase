@@ -58,4 +58,10 @@ public final class ComentarioRevisorAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<ComentarioRevisorDTO> toDtoListFromDomainList(List<ComentarioRevisorDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

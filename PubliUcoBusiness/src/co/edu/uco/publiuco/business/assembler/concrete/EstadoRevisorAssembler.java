@@ -44,4 +44,10 @@ public final class EstadoRevisorAssembler implements Assembler<EstadoRevisorDoma
 	public List<EstadoRevisorDomain> toDomainListFromEntityList(List<EstadoRevisorEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<EstadoRevisorDTO> toDtoListFromDomainList(List<EstadoRevisorDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -52,4 +52,10 @@ public final class PlanCategoriaAssembler implements Assembler<PlanCategoriaDoma
 	public List<PlanCategoriaDomain> toDomainListFromEntityList(List<PlanCategoriaEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<PlanCategoriaDTO> toDtoListFromDomainList(List<PlanCategoriaDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

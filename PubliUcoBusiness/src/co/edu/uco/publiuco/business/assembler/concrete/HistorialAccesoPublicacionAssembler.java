@@ -55,4 +55,11 @@ public final class HistorialAccesoPublicacionAssembler implements
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<HistorialAccesoPublicacionDTO> toDtoListFromDomainList(
+			List<HistorialAccesoPublicacionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

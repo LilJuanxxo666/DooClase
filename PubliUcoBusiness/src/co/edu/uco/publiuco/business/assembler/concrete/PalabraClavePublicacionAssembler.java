@@ -52,4 +52,10 @@ public final class PalabraClavePublicacionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<PalabraClavePublicacionDTO> toDtoListFromDomainList(List<PalabraClavePublicacionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

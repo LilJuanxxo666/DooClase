@@ -50,4 +50,10 @@ public final class TipoRelacionInstitucionAssembler
 	public List<TipoRelacionInstitucionDomain> toDomainListFromEntityList(List<TipoRelacionInstitucionEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<TipoRelacionInstitucionDTO> toDtoListFromDomainList(List<TipoRelacionInstitucionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

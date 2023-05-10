@@ -54,4 +54,11 @@ public final class CategoriaAdministradorCategoriaAssembler implements
 			List<CategoriaAdministradorCategoriaEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<CategoriaAdministradorCategoriaDTO> toDtoListFromDomainList(
+			List<CategoriaAdministradorCategoriaDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

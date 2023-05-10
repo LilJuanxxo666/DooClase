@@ -54,4 +54,10 @@ public final class PlanPublicacionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<PlanPublicacionDTO> toDtoListFromDomainList(List<PlanPublicacionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -53,4 +53,10 @@ public final class SuscripcionPublicacionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<SuscripcionPublicacionDTO> toDtoListFromDomainList(List<SuscripcionPublicacionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

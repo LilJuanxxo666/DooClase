@@ -27,3 +27,7 @@ b
 2src/co/edu/uco/publiuco/data/dao/CategoriaDAO.java,2\0\206f4142a287251be2eb3e66d6a9f995f44db03a
 a
 1src/co/edu/uco/publiuco/data/dao/EscritorDAO.java,1\6\162faf075a4ec90e79edec3903da53de34ae2741
+f
+6src/co/edu/uco/publiuco/data/dao/EstadoRevisorDAO.java,1\f\1fbeb0c4f373090a08dd97c13ab75688afee12c0
+~
+Nsrc/co/edu/uco/publiuco/data/dao/relational/sqlserver/ReporteSqlServerDAO.java,7\5\75bf48b827fc48f52d373e214f0184faefc778df

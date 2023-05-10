@@ -48,4 +48,10 @@ public final class TipoIdentificacionAssembler
 	public List<TipoIdentificacionDomain> toDomainListFromEntityList(List<TipoIdentificacionEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<TipoIdentificacionDTO> toDtoListFromDomainList(List<TipoIdentificacionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

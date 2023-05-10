@@ -45,4 +45,10 @@ public final class EstadoComentarioLectorAssembler
 	public List<EstadoComentarioLectorDomain> toDomainListFromEntityList(List<EstadoComentarioLectorEntity> entityList) {
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<EstadoComentarioLectorDTO> toDtoListFromDomainList(List<EstadoComentarioLectorDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
