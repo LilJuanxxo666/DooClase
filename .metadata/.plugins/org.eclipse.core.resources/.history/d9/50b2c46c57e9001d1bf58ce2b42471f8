@@ -1,5 +1,0 @@
-package co.edu.uco.publiuco.crosscutting.exception;
-
-public class PubliUcoDataException extends PubliUcoException{
-
-}

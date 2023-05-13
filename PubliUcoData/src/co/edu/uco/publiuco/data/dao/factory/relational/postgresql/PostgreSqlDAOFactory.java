@@ -64,12 +64,17 @@ import co.edu.uco.publiuco.data.dao.factory.DAOFactory;
 public class PostgreSqlDAOFactory extends DAOFactory{
 	
 	private Connection conexion;
-
+	
+	public PostgreSqlDAOFactory() {
+		abrirConexion();
+	}
+	
 	@Override
 	protected void abrirConexion() {
 		try { 
 			conexion = DriverManager.getConnection("jdbc:postgresql://localhost:5432/publiuco", "postgres", "admin123");
 			UtilSql.connectionIsOpen(conexion);
+			System.out.println("Connected");
 		}catch (final PubliUcoException exception) {
 			throw exception;
 		}catch (IllegalArgumentException exception) {
@@ -143,6 +148,10 @@ public class PostgreSqlDAOFactory extends DAOFactory{
 			
 			throw PubliUcoCrossCuttingException.create(userMessage, technicalMessage, exception);
 		}
+	}
+	
+	public static void main(String[] args) {
+		PostgreSqlDAOFactory base = new PostgreSqlDAOFactory();
 	}
 
 	@Override
