@@ -68,8 +68,7 @@ public final class ComentarioLectorAssembler
 
 	@Override
 	public List<ComentarioLectorDTO> toDtoListFromDomainList(List<ComentarioLectorDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 
 }

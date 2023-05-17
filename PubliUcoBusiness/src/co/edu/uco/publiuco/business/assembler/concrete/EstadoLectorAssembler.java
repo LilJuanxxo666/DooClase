@@ -47,7 +47,6 @@ public final class EstadoLectorAssembler implements Assembler<EstadoLectorDomain
 
 	@Override
 	public List<EstadoLectorDTO> toDtoListFromDomainList(List<EstadoLectorDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

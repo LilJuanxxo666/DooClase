@@ -6,6 +6,6 @@ import co.edu.uco.publiuco.business.domain.TipoReporteDomain;
 
 public interface TipoReporteBusiness {
 	
-	List<TipoReporteDomain> read(TipoReporteDomain domain);
+	List<TipoReporteDomain> list(TipoReporteDomain domain);
 
 }

@@ -56,8 +56,7 @@ public final class PlanPublicacionAssembler
 
 	@Override
 	public List<PlanPublicacionDTO> toDtoListFromDomainList(List<PlanPublicacionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 
 }

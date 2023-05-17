@@ -6,6 +6,6 @@ import co.edu.uco.publiuco.business.domain.EstadoPreferenciaDomain;
 
 public interface EstadoPreferenciaBusiness {
 	
-	List<EstadoPreferenciaDomain> read(EstadoPreferenciaDomain domain);
+	List<EstadoPreferenciaDomain> list(EstadoPreferenciaDomain domain);
 
 }

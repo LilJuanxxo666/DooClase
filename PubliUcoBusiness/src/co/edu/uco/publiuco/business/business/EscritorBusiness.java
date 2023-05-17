@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.EscritorDomain;
 
 public interface EscritorBusiness {
 	
-	void create(EscritorDomain domain);
+	void register(EscritorDomain domain);
 
-	List<EscritorDomain> read(EscritorDomain domain);
+	List<EscritorDomain> list(EscritorDomain domain);
 
-	void update(EscritorDomain domain);
+	void modify(EscritorDomain domain);
 
-	void delete(EscritorDomain domain);
+	void drop(EscritorDomain domain);
 
 }

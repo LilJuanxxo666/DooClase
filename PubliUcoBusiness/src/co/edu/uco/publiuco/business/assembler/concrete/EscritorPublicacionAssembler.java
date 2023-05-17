@@ -59,8 +59,7 @@ public final class EscritorPublicacionAssembler
 
 	@Override
 	public List<EscritorPublicacionDTO> toDtoListFromDomainList(List<EscritorPublicacionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 
 }

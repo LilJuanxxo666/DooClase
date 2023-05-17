@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.PlanCategoriaDomain;
 
 public interface PlanCategoriaBusiness {
 	
-	void create(PlanCategoriaDomain domain);
+	void register(PlanCategoriaDomain domain);
 
-	List<PlanCategoriaDomain> read(PlanCategoriaDomain domain);
+	List<PlanCategoriaDomain> list(PlanCategoriaDomain domain);
 
-	void update(PlanCategoriaDomain domain);
+	void modify(PlanCategoriaDomain domain);
 
-	void delete(PlanCategoriaDomain domain);
+	void drop(PlanCategoriaDomain domain);
 
 }

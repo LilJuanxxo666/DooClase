@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.PalabraClavePublicacionDomain;
 
 public interface PalabraClavePublicacionBusiness {
 	
-	void create(PalabraClavePublicacionDomain domain);
+	void register(PalabraClavePublicacionDomain domain);
 
-	List<PalabraClavePublicacionDomain> read(PalabraClavePublicacionDomain domain);
+	List<PalabraClavePublicacionDomain> list(PalabraClavePublicacionDomain domain);
 
-	void update(PalabraClavePublicacionDomain domain);
+	void modify(PalabraClavePublicacionDomain domain);
 
-	void delete(PalabraClavePublicacionDomain domain);
+	void drop(PalabraClavePublicacionDomain domain);
 
 }

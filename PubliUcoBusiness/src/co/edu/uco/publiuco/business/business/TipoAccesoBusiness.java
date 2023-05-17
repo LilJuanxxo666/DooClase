@@ -6,12 +6,6 @@ import co.edu.uco.publiuco.business.domain.TipoAccesoDomain;
 
 public interface TipoAccesoBusiness {
 	
-	void create(TipoAccesoDomain domain);
-
-	List<TipoAccesoDomain> read(TipoAccesoDomain domain);
+	List<TipoAccesoDomain> list(TipoAccesoDomain domain);
 	
-	void update(TipoAccesoDomain domain);
-
-	void delete(TipoAccesoDomain domain);
-
 }

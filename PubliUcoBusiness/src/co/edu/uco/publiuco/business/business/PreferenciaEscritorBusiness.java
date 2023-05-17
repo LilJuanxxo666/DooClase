@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.PreferenciaEscritorDomain;
 
 public interface PreferenciaEscritorBusiness {
 	
-	void create(PreferenciaEscritorDomain domain);
+	void register(PreferenciaEscritorDomain domain);
 
-	List<PreferenciaEscritorDomain> read(PreferenciaEscritorDomain domain);
+	List<PreferenciaEscritorDomain> list(PreferenciaEscritorDomain domain);
 
-	void update(PreferenciaEscritorDomain domain);
+	void modify(PreferenciaEscritorDomain domain);
 
-	void delete(PreferenciaEscritorDomain domain);
+	void drop(PreferenciaEscritorDomain domain);
 
 }

@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.PerfilDomain;
 
 public interface PerfilBusiness {
 	
-	void create(PerfilDomain domain);
+	void register(PerfilDomain domain);
 
-	List<PerfilDomain> read(PerfilDomain domain);
+	List<PerfilDomain> list(PerfilDomain domain);
 
-	void update(PerfilDomain domain);
+	void modify(PerfilDomain domain);
 
-	void delete(PerfilDomain domain);
+	void drop(PerfilDomain domain);
 
 }

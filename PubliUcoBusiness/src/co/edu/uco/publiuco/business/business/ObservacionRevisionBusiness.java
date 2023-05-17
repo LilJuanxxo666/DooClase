@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.ObservacionRevisionDomain;
 
 public interface ObservacionRevisionBusiness {
 	
-	void create(ObservacionRevisionDomain domain);
+	void register(ObservacionRevisionDomain domain);
 
-	List<ObservacionRevisionDomain> read(ObservacionRevisionDomain domain);
+	List<ObservacionRevisionDomain> list(ObservacionRevisionDomain domain);
 
-	void update(ObservacionRevisionDomain domain);
+	void modify(ObservacionRevisionDomain domain);
 
-	void delete(ObservacionRevisionDomain domain);
+	void drop(ObservacionRevisionDomain domain);
 
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{EstadoSuscripcionDTO.java[EstadoSuscripcionDTO" modifiers="17" timestamp="1682657654609"/>
-    <typeInfo handle="=PubliUcoCrossCutting/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.crosscutting.utils{UtilUUID.java[UtilUUID" modifiers="17" timestamp="1682474368008"/>
+    <typeInfo handle="=PubliUcoCrossCutting/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.crosscutting.utils{UtilUUID.java[UtilUUID" modifiers="17" timestamp="1683935388383"/>
     <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{RevisorRevisionDTO.java[RevisorRevisionDTO" modifiers="17" timestamp="1682833622268"/>
     <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{TipoAccesoDTO.java[TipoAccesoDTO" modifiers="17" timestamp="1682981251207"/>
     <typeInfo handle="=PubliUcoDTO/src=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uco.publiuco.dto{TipoEscritorDTO.java[TipoEscritorDTO" modifiers="17" timestamp="1682989759364"/>

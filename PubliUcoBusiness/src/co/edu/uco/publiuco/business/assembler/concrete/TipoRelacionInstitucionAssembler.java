@@ -53,7 +53,6 @@ public final class TipoRelacionInstitucionAssembler
 
 	@Override
 	public List<TipoRelacionInstitucionDTO> toDtoListFromDomainList(List<TipoRelacionInstitucionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

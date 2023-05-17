@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.AdministradorCategoriaDomain;
 
 public interface AdministradorCategoriaBusiness {
 
-	void create(AdministradorCategoriaDomain domain);
+	void register(AdministradorCategoriaDomain domain);
 
-	List<AdministradorCategoriaDomain> read(AdministradorCategoriaDomain domain);
+	List<AdministradorCategoriaDomain> list(AdministradorCategoriaDomain domain);
 
-	void update(AdministradorCategoriaDomain domain);
+	void modify(AdministradorCategoriaDomain domain);
 
-	void delete(AdministradorCategoriaDomain domain);
+	void drop(AdministradorCategoriaDomain domain);
 
 }

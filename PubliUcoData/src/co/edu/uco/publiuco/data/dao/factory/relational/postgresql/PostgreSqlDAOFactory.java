@@ -149,10 +149,6 @@ public class PostgreSqlDAOFactory extends DAOFactory{
 			throw PubliUcoCrossCuttingException.create(userMessage, technicalMessage, exception);
 		}
 	}
-	
-	public static void main(String[] args) {
-		PostgreSqlDAOFactory base = new PostgreSqlDAOFactory();
-	}
 
 	@Override
 	public EstadoTipoRelacionInstitucionDAO getEstadoTipoRelacionInstitucionDAO() {

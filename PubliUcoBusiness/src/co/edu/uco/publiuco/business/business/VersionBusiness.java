@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.VersionDomain;
 
 public interface VersionBusiness {
 
-	void create(VersionDomain domain);
+	void register(VersionDomain domain);
 
-	List<VersionDomain> read(VersionDomain domain);
+	List<VersionDomain> list(VersionDomain domain);
 
-	void update(VersionDomain domain);
+	void modify(VersionDomain domain);
 
-	void delete(VersionDomain domain);
+	void drop(VersionDomain domain);
 
 }

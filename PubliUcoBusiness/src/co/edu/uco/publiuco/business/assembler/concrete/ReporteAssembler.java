@@ -59,7 +59,6 @@ public final class ReporteAssembler implements Assembler<ReporteDomain, ReporteD
 
 	@Override
 	public List<ReporteDTO> toDtoListFromDomainList(List<ReporteDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.ComentarioLectorDomain;
 
 public interface ComentarioLectorBusiness {
 	
-	void create(ComentarioLectorDomain domain);
+	void register(ComentarioLectorDomain domain);
 
-	List<ComentarioLectorDomain> read(ComentarioLectorDomain domain);
+	List<ComentarioLectorDomain> list(ComentarioLectorDomain domain);
 
-	void update(ComentarioLectorDomain domain);
+	void modify(ComentarioLectorDomain domain);
 
-	void delete(ComentarioLectorDomain domain);
+	void drop(ComentarioLectorDomain domain);
 
 }

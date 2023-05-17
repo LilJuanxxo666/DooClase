@@ -50,7 +50,6 @@ public final class TipoAccesoAssembler implements Assembler<TipoAccesoDomain, Ti
 
 	@Override
 	public List<TipoAccesoDTO> toDtoListFromDomainList(List<TipoAccesoDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.ReporteDomain;
 
 public interface ReporteBusiness {
 	
-	void create(ReporteDomain domain);
+	void register(ReporteDomain domain);
 
-	List<ReporteDomain> read(ReporteDomain domain);
+	List<ReporteDomain> list(ReporteDomain domain);
 
-	void update(ReporteDomain domain);
+	void modify(ReporteDomain domain);
 
-	void delete(ReporteDomain domain);
+	void drop(ReporteDomain domain);
 
 }

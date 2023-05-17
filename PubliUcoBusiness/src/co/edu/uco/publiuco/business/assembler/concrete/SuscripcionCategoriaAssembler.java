@@ -59,7 +59,6 @@ public final class SuscripcionCategoriaAssembler
 
 	@Override
 	public List<SuscripcionCategoriaDTO> toDtoListFromDomainList(List<SuscripcionCategoriaDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

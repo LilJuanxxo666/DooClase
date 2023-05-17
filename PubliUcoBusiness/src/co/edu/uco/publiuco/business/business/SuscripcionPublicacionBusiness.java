@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.SuscripcionPublicacionDomain;
 
 public interface SuscripcionPublicacionBusiness {
 	
-	void create(SuscripcionPublicacionDomain domain);
+	void register(SuscripcionPublicacionDomain domain);
 
-	List<SuscripcionPublicacionDomain> read(SuscripcionPublicacionDomain domain);
+	List<SuscripcionPublicacionDomain> list(SuscripcionPublicacionDomain domain);
 
-	void update(SuscripcionPublicacionDomain domain);
+	void modify(SuscripcionPublicacionDomain domain);
 
-	void delete(SuscripcionPublicacionDomain domain);
+	void drop(SuscripcionPublicacionDomain domain);
 
 }

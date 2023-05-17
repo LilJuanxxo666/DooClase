@@ -1,10 +1,7 @@
 
 x
-java:S16120"EReplace this lambda with method reference 'this::toDomainFromEntity'.(àøÖ<8È½”€1H¸RMINORZ
+java:S16120"EReplace this lambda with method reference 'this::toDomainFromEntity'.(àøÖ<8È½”€1H¦ÜRMINORZ
 CODE_SMELL
-_
-java:S11686"+Return an empty collection instead of null.(¥¹ï8„Œ¿”€1H”¹RMAJORZ
-CODE_SMELL
-j
-java:S11355"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ8„Œ¿”€1H—¹RINFOZ
+{
+java:S16125"BReplace this lambda with method reference 'this::toDtoFromDomain'.(ë¢÷ûÿÿÿÿ8ìù­é1HïÜRMINORZ
 CODE_SMELL

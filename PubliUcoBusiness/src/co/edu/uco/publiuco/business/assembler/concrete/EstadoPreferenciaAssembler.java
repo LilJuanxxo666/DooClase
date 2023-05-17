@@ -48,7 +48,6 @@ public final class EstadoPreferenciaAssembler
 
 	@Override
 	public List<EstadoPreferenciaDTO> toDtoListFromDomainList(List<EstadoPreferenciaDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

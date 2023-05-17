@@ -58,8 +58,7 @@ public final class HistorialAccesoPublicacionAssembler implements
 	@Override
 	public List<HistorialAccesoPublicacionDTO> toDtoListFromDomainList(
 			List<HistorialAccesoPublicacionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 
 }

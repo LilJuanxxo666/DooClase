@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.RevisionDomain;
 
 public interface RevisionBusiness {
 	
-	void create(RevisionDomain domain);
+	void register(RevisionDomain domain);
 
-	List<RevisionDomain> read(RevisionDomain domain);
+	List<RevisionDomain> list(RevisionDomain domain);
 
-	void update(RevisionDomain domain);
+	void modify(RevisionDomain domain);
 
-	void delete(RevisionDomain domain);
+	void drop(RevisionDomain domain);
 
 }

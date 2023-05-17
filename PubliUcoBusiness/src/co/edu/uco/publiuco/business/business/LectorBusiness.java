@@ -1,17 +1,16 @@
 package co.edu.uco.publiuco.business.business;
 
 import java.util.List;
-
 import co.edu.uco.publiuco.business.domain.LectorDomain;
 
 public interface LectorBusiness {
 	
-	void create(LectorDomain domain);
+	void register(LectorDomain domain);
 
-	List<LectorDomain> read(LectorDomain domain);
+	List<LectorDomain> list(LectorDomain domain);
 
-	void update(LectorDomain domain);
+	void modify(LectorDomain domain);
 
-	void delete(LectorDomain entity);
+	void drop(LectorDomain domain);
 
 }

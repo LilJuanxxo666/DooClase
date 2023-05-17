@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.CalificacionDomain;
 
 public interface CalificacionBusiness {
 	
-	void create(CalificacionDomain domain);
+	void register(CalificacionDomain domain);
 
-	List<CalificacionDomain> read(CalificacionDomain domain);
+	List<CalificacionDomain> list(CalificacionDomain domain);
 
-	void update(CalificacionDomain domain);
+	void modify(CalificacionDomain domain);
 
-	void delete(CalificacionDomain domain);
+	void drop(CalificacionDomain domain);
 
 }

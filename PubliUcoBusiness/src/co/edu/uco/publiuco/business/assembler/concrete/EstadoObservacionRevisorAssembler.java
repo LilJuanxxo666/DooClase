@@ -51,7 +51,6 @@ public final class EstadoObservacionRevisorAssembler implements
 
 	@Override
 	public List<EstadoObservacionRevisorDTO> toDtoListFromDomainList(List<EstadoObservacionRevisorDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

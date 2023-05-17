@@ -77,7 +77,6 @@ public final class LectorAssembler implements Assembler<LectorDomain, LectorDTO,
 
 	@Override
 	public List<LectorDTO> toDtoListFromDomainList(List<LectorDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

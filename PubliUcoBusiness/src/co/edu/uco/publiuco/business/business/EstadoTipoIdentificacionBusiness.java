@@ -6,6 +6,6 @@ import co.edu.uco.publiuco.business.domain.EstadoTipoIdentificacionDomain;
 
 public interface EstadoTipoIdentificacionBusiness {
 	
-	List<EstadoTipoIdentificacionDomain> read(EstadoTipoIdentificacionDomain domain);
+	List<EstadoTipoIdentificacionDomain> list(EstadoTipoIdentificacionDomain domain);
 
 }

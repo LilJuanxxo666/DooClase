@@ -54,8 +54,7 @@ public final class PalabraClavePublicacionAssembler
 
 	@Override
 	public List<PalabraClavePublicacionDTO> toDtoListFromDomainList(List<PalabraClavePublicacionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 
 }

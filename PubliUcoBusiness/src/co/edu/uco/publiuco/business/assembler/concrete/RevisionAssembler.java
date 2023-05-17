@@ -66,8 +66,7 @@ public final class RevisionAssembler implements Assembler<RevisionDomain, Revisi
 
 	@Override
 	public List<RevisionDTO> toDtoListFromDomainList(List<RevisionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 
 }

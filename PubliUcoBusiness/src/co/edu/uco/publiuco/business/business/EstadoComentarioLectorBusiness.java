@@ -6,6 +6,6 @@ import co.edu.uco.publiuco.business.domain.EstadoComentarioLectorDomain;
 
 public interface EstadoComentarioLectorBusiness {
 
-	List<EstadoComentarioLectorDomain> read(EstadoComentarioLectorDomain domain);
+	List<EstadoComentarioLectorDomain> list(EstadoComentarioLectorDomain domain);
 
 }

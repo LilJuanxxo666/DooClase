@@ -58,8 +58,7 @@ public final class CalificacionAssembler implements Assembler<CalificacionDomain
 
 	@Override
 	public List<CalificacionDTO> toDtoListFromDomainList(List<CalificacionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 
 }

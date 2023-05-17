@@ -78,7 +78,6 @@ public final class AdministradorCategoriaAssembler
 
 	@Override
 	public List<AdministradorCategoriaDTO> toDtoListFromDomainList(List<AdministradorCategoriaDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

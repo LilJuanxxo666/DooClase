@@ -48,7 +48,6 @@ public final class TipoReporteAssembler implements Assembler<TipoReporteDomain, 
 
 	@Override
 	public List<TipoReporteDTO> toDtoListFromDomainList(List<TipoReporteDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

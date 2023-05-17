@@ -6,12 +6,12 @@ import co.edu.uco.publiuco.business.domain.HistorialAccesoPublicacionDomain;
 
 public interface HistorialAccesoPublicacionBusiness {
 	
-	void create(HistorialAccesoPublicacionDomain domain);
+	void register(HistorialAccesoPublicacionDomain domain);
 
-	List<HistorialAccesoPublicacionDomain> read(HistorialAccesoPublicacionDomain domain);
+	List<HistorialAccesoPublicacionDomain> list(HistorialAccesoPublicacionDomain domain);
 
-	void update(HistorialAccesoPublicacionDomain domain);
+	void modify(HistorialAccesoPublicacionDomain domain);
 
-	void delete(HistorialAccesoPublicacionDomain domain);
+	void drop(HistorialAccesoPublicacionDomain domain);
 
 }

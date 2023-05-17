@@ -48,7 +48,6 @@ public final class EstadoEscritorAssembler
 
 	@Override
 	public List<EstadoEscritorDTO> toDtoListFromDomainList(List<EstadoEscritorDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 }

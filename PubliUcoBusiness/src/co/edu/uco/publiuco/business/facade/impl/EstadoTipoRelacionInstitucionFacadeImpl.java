@@ -1,11 +1,9 @@
 package co.edu.uco.publiuco.business.facade.impl;
 
 import java.util.List;
-
-
 import co.edu.uco.publiuco.business.assembler.concrete.EstadoTipoRelacionInstitucionAssembler;
 import co.edu.uco.publiuco.business.business.EstadoTipoRelacionInstitucionBusiness;
-import co.edu.uco.publiuco.business.business.impl.EstadoTipoRelacionInstitucionBusinessIml;
+import co.edu.uco.publiuco.business.business.impl.EstadoTipoRelacionInstitucionBusinessImpl;
 import co.edu.uco.publiuco.business.facade.EstadoTipoRelacionInstitucionFacade;
 import co.edu.uco.publiuco.crosscutting.exception.PubliUcoBusinessException;
 import co.edu.uco.publiuco.crosscutting.exception.PubliUcoException;
@@ -21,7 +19,7 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 
 	public EstadoTipoRelacionInstitucionFacadeImpl() {
 		daoFactory = DAOFactory.getFactory(Factory.SQLSERVER);
-		business = new EstadoTipoRelacionInstitucionBusinessIml(daoFactory);
+		business = new EstadoTipoRelacionInstitucionBusinessImpl(daoFactory);
 	}
 
 	@Override
@@ -48,7 +46,7 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 	}
 
 	@Override
-	public List<EstadoTipoRelacionInstitucionDTO> list(EstadoTipoRelacionInstitucionDTO dto) {
+	public List<EstadoTipoRelacionInstitucionDTO> list(final EstadoTipoRelacionInstitucionDTO dto) {
 		try {
 			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
 			final var returnDomainList = business.list(domain);
@@ -57,8 +55,8 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 		}catch (final PubliUcoException exception) {
 			throw exception;
 		}catch (final Exception exception) {
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.LIST_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.LIST_EXCEPTION_TECHNICAL_MESSAGE;
 			
 			throw PubliUcoBusinessException.create(userMessage, technicalMessage, exception);
 		}finally {
@@ -67,7 +65,7 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 	}
 
 	@Override
-	public void modify(EstadoTipoRelacionInstitucionDTO dto) {
+	public void modify(final EstadoTipoRelacionInstitucionDTO dto) {
 		try {
 			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
 			daoFactory.iniciarTransaccion();
@@ -80,8 +78,8 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 		} catch (Exception exception) {
 			daoFactory.cancelarTransaccion();
 
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.MODIFY_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.MODIFY_EXCEPTION_TECHNICAL_MESSAGE;
 
 			throw PubliUcoBusinessException.create(technicalMessage, userMessage, exception);
 		} finally {
@@ -90,7 +88,7 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 	}
 
 	@Override
-	public void drop(EstadoTipoRelacionInstitucionDTO dto) {
+	public void drop(final EstadoTipoRelacionInstitucionDTO dto) {
 		try {
 			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
 			daoFactory.iniciarTransaccion();
@@ -103,8 +101,8 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 		} catch (Exception exception) {
 			daoFactory.cancelarTransaccion();
 
-			var userMessage = "";
-			var technicalMessage = "";
+			var userMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.DROP_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.DROP_EXCEPTION_TECHNICAL_MESSAGE;
 
 			throw PubliUcoBusinessException.create(technicalMessage, userMessage, exception);
 		} finally {

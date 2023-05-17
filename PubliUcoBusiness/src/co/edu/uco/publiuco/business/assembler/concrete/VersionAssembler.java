@@ -64,8 +64,7 @@ public final class VersionAssembler implements Assembler<VersionDomain, VersionD
 
 	@Override
 	public List<VersionDTO> toDtoListFromDomainList(List<VersionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDtoFromDomain(domain)).toList();
 	}
 
 }
