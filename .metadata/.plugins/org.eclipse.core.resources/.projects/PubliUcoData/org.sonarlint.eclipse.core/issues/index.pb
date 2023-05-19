@@ -31,3 +31,7 @@ f
 6src/co/edu/uco/publiuco/data/dao/EstadoRevisorDAO.java,1\f\1fbeb0c4f373090a08dd97c13ab75688afee12c0
 ~
 Nsrc/co/edu/uco/publiuco/data/dao/relational/sqlserver/ReporteSqlServerDAO.java,7\5\75bf48b827fc48f52d373e214f0184faefc778df
+g
+7src/co/edu/uco/publiuco/data/dao/relational/SqlDAO.java,d\1\d1a0dfbfe26d02dca6b22d83f7a7309a834d104f
+ç
+]src/co/edu/uco/publiuco/data/dao/relational/sqlserver/AdministradorCategoriaSqlServerDAO.java,7\b\7b1d74971b4b121be0c41bc6b2cc46575901302c

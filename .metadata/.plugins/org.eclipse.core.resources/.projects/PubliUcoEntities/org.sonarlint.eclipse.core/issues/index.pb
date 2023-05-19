@@ -91,8 +91,6 @@ d
 4src/co/edu/uco/publiuco/entities/RevisionEntity.java,5\a\5acbdb8835c8cb809f4d7a681378809e5d784b3a
 c
 3src/co/edu/uco/publiuco/entities/ReporteEntity.java,e\e\ee9b67c4a584f4a3cf1ff49fca700c77356d4a37
-l
-<src/co/edu/uco/publiuco/entities/RevisiorRevisionEntity.java,2\7\27e7e8a3e8fdd5370ec8a455ae6efc7346b8e487
 k
 ;src/co/edu/uco/publiuco/entities/RevisorRevisionEntity.java,9\7\97306d8936d8db95781f88805fa048a986423246
 m
@@ -101,7 +99,5 @@ o
 ?src/co/edu/uco/publiuco/entities/ObservacionRevisionEntity.java,a\0\a0f1d95b64a685943909bd5472ad9a930016e38e
 {
 Ksrc/co/edu/uco/publiuco/entities/CategoriaAdministradorCategoriaEntity.java,7\9\7928a1424dd9d6f51d183de0dbc93b8bdf619011
-n
->src/co/edu/uco/publiuco/entities/TipoIdentificacionDomain.java,5\0\50069dcf16ad1b55cf4802900baf29ebfabc6210
 c
 3src/co/edu/uco/publiuco/entities/VersionEntity.java,f\8\f80de15e843e7e5e91e6347bc9a0e55fbbfea56d

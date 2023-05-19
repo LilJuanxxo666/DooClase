@@ -449,3 +449,7 @@ i
 9src/co/edu/uco/publiuco/business/facade/LectorFacade.java,9\2\9258f49b81f01a56c2ad96b8b34e7fbf690736b5
 v
 Fsrc/co/edu/uco/publiuco/business/facade/ObservacionRevisionFacade.java,3\7\375dcbbdcb6fa4ce9b39d6503c4f49cbacb0a045
+s
+Csrc/co/edu/uco/publiuco/business/facade/impl/VersionFacadeImpl.java,7\1\71ad80db1bf9d414a3fe144c4d1f7f57bbad9287
+ç
+]src/co/edu/uco/publiuco/business/business/impl/EstadoTipoRelacionInstitucionBusinessImpl.java,6\7\6707813f114c08bc2da6aba64bef3bf96f7e5280

@@ -23,6 +23,15 @@ public final class EstadoTipoRelacionInstitucionEntity {
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
+	public static final EstadoTipoRelacionInstitucionEntity createWithIdentificador(final UUID identificador) {
+		return new EstadoTipoRelacionInstitucionEntity(identificador, UtilText.EMPTY, UtilText.EMPTY);
+	}
+	public static final EstadoTipoRelacionInstitucionEntity createWithNombre(final String nombre) {
+		return new EstadoTipoRelacionInstitucionEntity(UtilUUID.DEFAULT_UUID, nombre, UtilText.EMPTY);
+	}
+	public static final EstadoTipoRelacionInstitucionEntity createWithDescripcion(final String nombre) {
+		return new EstadoTipoRelacionInstitucionEntity(UtilUUID.DEFAULT_UUID, nombre, UtilText.EMPTY);
+	}
 	public static final EstadoTipoRelacionInstitucionEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

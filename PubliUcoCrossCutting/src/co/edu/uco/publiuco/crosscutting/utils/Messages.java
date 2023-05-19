@@ -573,4 +573,21 @@ public final class Messages {
 		public static final String DROP_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de eliminar la informacion de la version. Por favor intente de nuevo y si el problema persiste comuniquese con el administrador de la aplicacion.";
 		public static final String DROP_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado una excepcion no conocido al momento de eliminar un VersionDTO. Por favor valide la traza completa de la excepcion presentada...";
 	}
+	
+	public static final class EstadoTipoRelacionInstitucionSqlServerDAOMessages{
+		private EstadoTipoRelacionInstitucionSqlServerDAOMessages(){}
+		public static final String REGISTER_USER_MESSAGE = "Se ha presentado un problema tratando de registrar la informacion estado tipo relacion institucion institucion";
+		public static final String REGISTER_SQLEXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema tipo SQLException, dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+		public static final String REGISTER_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperado dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+		public static final String UPDATE_USER_MESSAGE = "Se ha presentado un problema tratando de ajustar la informacion estado tipo relacion institucion institucion";
+		public static final String UPDATE_SQLEXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema tipo SQLException, dentro del metodo update de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+		public static final String UPDATE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperado dentro del metodo update de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+		public static final String DELETE_USER_MESSAGE = "Se ha presentado un problema tratando de dar de baja la informacion estado tipo relacion institucion institucion";
+		public static final String DELETE_SQLEXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema tipo SQLException, dentro del metodo delete de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+		public static final String DELETE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperado dentro del metodo delete de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+		public static final String LIST_USER_MESSAGE = "Se ha presentado un problema tratando de listar la informacion estado tipo relacion institucion institucion";
+		public static final String LIST_SQLEXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema tipo SQLException, dentro del metodo list de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+		public static final String LIST_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperado dentro del metodo list de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+		
+	}
 }

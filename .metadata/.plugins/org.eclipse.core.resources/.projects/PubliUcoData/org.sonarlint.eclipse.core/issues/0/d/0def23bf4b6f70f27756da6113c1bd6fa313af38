@@ -1,19 +1,0 @@
-
-\
-java:S1172"1Remove this unused method parameter "connection".(–»Ì/Hº'RMAJORZ
-CODE_SMELL
-b
-java:S1135"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿH¼'RINFOZ
-CODE_SMELL
-W
-java:S1168"+Return an empty collection instead of null.(¥¹ïH½'RMAJORZ
-CODE_SMELL
-b
-java:S1135"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿHÀ'RINFOZ
-CODE_SMELL
-b
-java:S1135"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿHÁ'RINFOZ
-CODE_SMELL
-b
-java:S1135""2Complete the task associated to this TODO comment.(» æÿÿÿÿÿHÂ'RINFOZ
-CODE_SMELL

@@ -1,6 +1,7 @@
 package co.edu.uco.publiuco.data.dao.relational;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
 import co.edu.uco.publiuco.crosscutting.exception.PubliUcoDataException;
@@ -34,4 +35,8 @@ public abstract class SqlDAO<E> {
 	protected abstract String prepareWhere(E entity, List<Object> parameters);
 	
 	protected abstract String prepareOrderBy();
+	
+	protected abstract void setParameters(PreparedStatement preparedStatement, List<Object> parameters);
+	
+	protected abstract List<E> executeQuery(PreparedStatement preparedStatement);
 }
