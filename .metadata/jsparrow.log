@@ -173,3 +173,8 @@ org.eclipse.core.internal.resources.ResourceException: Marker id 10941 not found
 2023-05-18 23:08:25 [Worker-5: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
 2023-05-19 17:14:11 [Worker-8: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
 2023-05-19 18:56:45 [Framework stop - Equinox Container: 75a79db1-bc9e-472f-a86d-42bcf8bebbc4] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-05-19 18:57:23 [Worker-6: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-05-19 19:13:36 [Framework stop - Equinox Container: ba6d223e-97d6-42ac-8abb-69db6be24900] INFO  eu.jsparrow.ui.a - Stopping jSparrow
+2023-05-22 13:11:55 [Worker-3: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-05-23 20:09:34 [Worker-7: Executing the early startup extensions] INFO  eu.jsparrow.ui.a - Starting jSparrow
+2023-05-23 21:24:32 [Framework stop - Equinox Container: e2b77476-a1bf-4d39-a573-b8146612ce89] INFO  eu.jsparrow.ui.a - Stopping jSparrow

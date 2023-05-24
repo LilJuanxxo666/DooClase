@@ -1,9 +1,12 @@
 package co.edu.uco.publiuco.api.controller;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,14 +27,12 @@ import co.edu.uco.publiuco.crosscutting.exception.PubliUcoException;
 import co.edu.uco.publiuco.dto.EstadoTipoRelacionInstitucionDTO;
 
 @RestController
-@RequestMapping("publiuco/api/v1/estadotiporelacioninstitucion")
+@RequestMapping("/")
 public final class EstadoTipoRelacionInstitucionController {
+	
+	private Logger log = LoggerFactory.getLogger(getClass());
 
 	private EstadoTipoRelacionInstitucionFacade facade;
-
-	public EstadoTipoRelacionInstitucionController() {
-		facade = new EstadoTipoRelacionInstitucionFacadeImpl();
-	}
 
 	@GetMapping("/dummy")
 	public EstadoTipoRelacionInstitucionDTO dummy() {
@@ -39,9 +41,10 @@ public final class EstadoTipoRelacionInstitucionController {
 
 	@GetMapping
 	public ResponseEntity<Response<EstadoTipoRelacionInstitucionDTO>> list(
-			@RequestParam EstadoTipoRelacionInstitucionDTO dto) {
+			@RequestBody EstadoTipoRelacionInstitucionDTO dto) {
 
 		List<EstadoTipoRelacionInstitucionDTO> list = new ArrayList<>();
+		list.add(dto);
 		list.add(EstadoTipoRelacionInstitucionDTO.create());
 		list.add(EstadoTipoRelacionInstitucionDTO.create());
 		list.add(EstadoTipoRelacionInstitucionDTO.create());
@@ -61,7 +64,7 @@ public final class EstadoTipoRelacionInstitucionController {
 	}
 
 	@PostMapping
-	public ResponseEntity<Response<EstadoTipoRelacionInstitucionDTO>> create(@RequestParam EstadoTipoRelacionInstitucionDTO dto) {
+	public ResponseEntity<Response<EstadoTipoRelacionInstitucionDTO>> create(@RequestBody EstadoTipoRelacionInstitucionDTO dto) {
 
 		var statusCode = HttpStatus.OK;
 		var response = new Response<EstadoTipoRelacionInstitucionDTO>();
@@ -70,7 +73,8 @@ public final class EstadoTipoRelacionInstitucionController {
 			var result = RegistrarEstadoTipoRelacionInstitucionValidation.validate(dto);
 
 			if (result.getMessages().isEmpty()) {
-				facade.register(dto);
+				facade = new EstadoTipoRelacionInstitucionFacadeImpl();
+				facade.create(dto);
 				response.getMessages().add("El nuevo estado tipo relacion se ha registrado de forma satisfactoria...");
 			} else {
 				statusCode = HttpStatus.BAD_REQUEST;
@@ -80,14 +84,12 @@ public final class EstadoTipoRelacionInstitucionController {
 		} catch (final PubliUcoException exception) {
 			statusCode = HttpStatus.BAD_REQUEST;
 			response.getMessages().add(exception.getUserMessage());
-			System.err.println(exception.getUserMessage());
-			System.err.println(exception.getTechnicalMessage());
-			exception.printStackTrace();
+			log.error(exception.getType().toString().concat("-").concat(exception.getTechnicalMessage()), exception);
 		} catch (final Exception exception) {
 			statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
 			response.getMessages().add("Se ha presentado un problema inesperado. Por favor de nuevo y si el problema persiste, contacta al administrador...");
-			System.err.println(exception.getMessage());
-			exception.printStackTrace();
+			
+			log.error("Se ha presentado un problema inesperado. Por favor anidar la consola de errores", exception);
 		}
 
 		return new ResponseEntity<>(response, statusCode);
@@ -95,7 +97,7 @@ public final class EstadoTipoRelacionInstitucionController {
 
 	@PutMapping("/{id}")
 	public EstadoTipoRelacionInstitucionDTO update(@PathVariable UUID id,
-			@RequestParam EstadoTipoRelacionInstitucionDTO dto) {
+			@RequestBody EstadoTipoRelacionInstitucionDTO dto) {
 		return dto.setIdentificador(id);
 	}
 

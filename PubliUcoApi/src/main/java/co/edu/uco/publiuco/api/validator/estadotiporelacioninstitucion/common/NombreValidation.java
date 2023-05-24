@@ -2,9 +2,7 @@ package co.edu.uco.publiuco.api.validator.estadotiporelacioninstitucion.common;
 
 import co.edu.uco.publiuco.api.validator.Result;
 import co.edu.uco.publiuco.api.validator.Validation;
-import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
-import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 public final class NombreValidation implements Validation<String>{
 

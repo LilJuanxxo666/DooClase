@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="co.edu.uco.publiuco.business.domain.TipoRevisionDomain"/>
-    <fullyQualifiedTypeName name="co.edu.uco.publiuco.business.domain.VersionDomain"/>
-    <fullyQualifiedTypeName name="co.edu.uco.publiuco.business.assembler.concrete.EstadoTipoRelacionInstitucionAssembler"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
@@ -20,7 +15,6 @@
     <fullyQualifiedTypeName name="co.edu.uco.publiuco.api.validator.Result"/>
     <fullyQualifiedTypeName name="co.edu.uco.publiuco.api.validator.estadotiporelacioninstitucion.common.NombreValidation"/>
     <fullyQualifiedTypeName name="co.edu.uco.publiuco.api.validator.estadotiporelacioninstitucion.common.DescripcionValidation"/>
-    <fullyQualifiedTypeName name="co.edu.uco.publiuco.crosscutting.exception.PubliUcoException"/>
     <fullyQualifiedTypeName name="co.edu.uco.publiuco.api.validator.estadotiporelacioninstitucion.RegistrarEstadoTipoRelacionInstitucionValidation"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="co.edu.uco.publiuco.business.facade.EstadoTipoRelacionInstitucionFacade"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="co.edu.uco.publiuco.data.dao.factory.DAOFactory"/>
     <fullyQualifiedTypeName name="co.edu.uco.publiuco.crosscutting.exception.PubliUcoBusinessException"/>
     <fullyQualifiedTypeName name="co.edu.uco.publiuco.business.domain.EstadoTipoRelacionInstitucionDomain"/>
+    <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="co.edu.uco.publiuco.crosscutting.exception.PubliUcoApieException"/>
+    <fullyQualifiedTypeName name="co.edu.uco.publiuco.crosscutting.exception.PubliUcoException"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
 </qualifiedTypeNameHistroy>

@@ -2,7 +2,6 @@ package co.edu.uco.publiuco.api.validator.estadotiporelacioninstitucion.common;
 
 import co.edu.uco.publiuco.api.validator.Result;
 import co.edu.uco.publiuco.api.validator.Validation;
-import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 
 public class DescripcionValidation implements Validation<String>{
 

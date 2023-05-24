@@ -4,5 +4,4 @@ public interface Validation<T> {
 	
 	Result execute(T data);
 	
-	
 }

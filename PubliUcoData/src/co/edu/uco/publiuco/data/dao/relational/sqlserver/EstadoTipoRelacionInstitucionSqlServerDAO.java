@@ -26,13 +26,14 @@ public final class EstadoTipoRelacionInstitucionSqlServerDAO extends SqlDAO<Esta
 	@Override
 	public final void create(final EstadoTipoRelacionInstitucionEntity entity) {
 
-		var sqlStatement = "Insert into EstadoTipoRelacionInstitucion(identificador, nombre, descripcion) values (?,?,?)";
+		var sqlStatement = "Insert into estado(identificador, nombre, descripcion, clase_nombre) values (?,?,?,?)";
 
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)) {
 
 			preparedStatement.setObject(1, entity.getIdentificador());
 			preparedStatement.setString(2, entity.getNombre());
 			preparedStatement.setString(3, entity.getDescripcion());
+			preparedStatement.setString(3, "EstadoTipoRelacionInstitucion");
 
 			preparedStatement.executeUpdate();
 
@@ -151,10 +152,9 @@ public final class EstadoTipoRelacionInstitucionSqlServerDAO extends SqlDAO<Esta
 		var setWhere = true;
 
 		if (UtilObject.isNull(entity)) {
-
 			if (!UtilUUID.isDefault(entity.getIdentificador())) {
 				parameters.add(entity.getIdentificador());
-				where.append("WHERE identificador=?");
+				where.append("WHERE identificador=? ");
 				setWhere = false;
 			}
 			if (!UtilText.getUtilText().isEmpty(entity.getNombre())) {

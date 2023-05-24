@@ -132,7 +132,7 @@ public final class AdministradorCategoriaSqlServerDAO extends SqlDAO<Administrad
 
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)) {
 
-			preparedStatement.setString(1, entity.getNombre());
+			preparedStatement.setObject(1, entity.getIdentificador());
 
 			preparedStatement.executeUpdate();
 
@@ -162,7 +162,7 @@ public final class AdministradorCategoriaSqlServerDAO extends SqlDAO<Administrad
 
 	@Override
 	protected final String prepareWhere(final AdministradorCategoriaEntity entity, List<Object> parameters) {
-
+		/*
 		final var where = new StringBuilder("");
 		parameters = UtilObject.getDefault(parameters, new ArrayList<>());
 
@@ -186,6 +186,8 @@ public final class AdministradorCategoriaSqlServerDAO extends SqlDAO<Administrad
 			}
 		}
 		return where.toString();
+		*/
+		return null;
 	}
 
 	@Override
